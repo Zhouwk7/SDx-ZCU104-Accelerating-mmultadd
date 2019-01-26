@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<cf:model cf:name="top" xmlns:cf="http://www.xilinx.com/connections" xd:type="design" xmlns:xd="http://www.xilinx.com/xidane">
+  <xd:cluster xd:num_functions="2" xd:function_names="madd:main.cpp:128 mmult:main.cpp:127"  xd:latency="23172">
+    <xd:function xd:function_name="madd:main.cpp:128" xd:accelerator_name="madd_1" xd:accelerator_latency="6210">
+      <xd:argument xd:argument_name="A" xd:argument_latency="1"/>
+      <xd:argument xd:argument_name="B" xd:argument_latency="8431"/>
+      <xd:argument xd:argument_name="C" xd:argument_latency="12595"/>
+    </xd:function>
+    <xd:function xd:function_name="mmult:main.cpp:127" xd:accelerator_name="mmult_1" xd:accelerator_latency="13884">
+      <xd:argument xd:argument_name="A" xd:argument_latency="8431"/>
+      <xd:argument xd:argument_name="B" xd:argument_latency="8431"/>
+      <xd:argument xd:argument_name="C" xd:argument_latency="6"/>
+    </xd:function>
+  </xd:cluster>
+</cf:model>

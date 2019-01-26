@@ -1,0 +1,251 @@
+
+
+================================================================
+== Vivado HLS Report for 'madd'
+================================================================
+* Date:           Sat Jan 26 20:50:23 2019
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        madd
+* Solution:       solution
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     3.454|        1.35|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    |  min |  max |  min |  max |   Type  |
+    +------+------+------+------+---------+
+    |  1035|  1035|  1035|  1035|   none  |
+    +------+------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+------+------+----------+-----------+-----------+------+----------+
+        |          |   Latency   | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|  min |  max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+------+------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |  1033|  1033|        11|          1|          1|  1024|    yes   |
+        +----------+------+------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 11
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 13
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 11, States = { 2 3 4 5 6 7 8 9 10 11 12 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	13  / (exitcond_flatten)
+	3  / (!exitcond_flatten)
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	2  / true
+13 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.65>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float* %A) nounwind, !map !7"   --->   Operation 14 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float* %B) nounwind, !map !13"   --->   Operation 15 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float* %C) nounwind, !map !17"   --->   Operation 16 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([5 x i8]* @madd_str) nounwind"   --->   Operation 17 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %A, [8 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)" [D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:45]   --->   Operation 18 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %B, [8 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)" [D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:45]   --->   Operation 19 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %C, [8 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)" [D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:45]   --->   Operation 20 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLatency(i32 1, i32 65535, [1 x i8]* @p_str1) nounwind" [D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:45]   --->   Operation 21 'speclatency' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.65ns)   --->   "br label %.preheader" [D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:47]   --->   Operation 22 'br' <Predicate = true> <Delay = 0.65>
+
+State 2 <SV = 1> <Delay = 0.94>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%indvar_flatten = phi i11 [ 0, %0 ], [ %indvar_flatten_next, %.preheader.preheader ]"   --->   Operation 23 'phi' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.94ns)   --->   "%exitcond_flatten = icmp eq i11 %indvar_flatten, -1024"   --->   Operation 24 'icmp' 'exitcond_flatten' <Predicate = true> <Delay = 0.94> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.94> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 25 [1/1] (0.79ns)   --->   "%indvar_flatten_next = add i11 %indvar_flatten, 1"   --->   Operation 25 'add' 'indvar_flatten_next' <Predicate = true> <Delay = 0.79> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "br i1 %exitcond_flatten, label %1, label %.preheader.preheader"   --->   Operation 26 'br' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 1.82>
+ST_3 : Operation 27 [1/1] (1.82ns)   --->   "%A_read = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %A) nounwind" [D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:50]   --->   Operation 27 'read' 'A_read' <Predicate = (!exitcond_flatten)> <Delay = 1.82> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_3 : Operation 28 [1/1] (1.82ns)   --->   "%B_read = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %B) nounwind" [D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:50]   --->   Operation 28 'read' 'B_read' <Predicate = (!exitcond_flatten)> <Delay = 1.82> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+
+State 4 <SV = 3> <Delay = 3.45>
+ST_4 : Operation 29 [8/8] (3.45ns)   --->   "%tmp_4 = fadd float %A_read, %B_read" [D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:50]   --->   Operation 29 'fadd' 'tmp_4' <Predicate = (!exitcond_flatten)> <Delay = 3.45> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 3.45>
+ST_5 : Operation 30 [7/8] (3.45ns)   --->   "%tmp_4 = fadd float %A_read, %B_read" [D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:50]   --->   Operation 30 'fadd' 'tmp_4' <Predicate = (!exitcond_flatten)> <Delay = 3.45> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 3.45>
+ST_6 : Operation 31 [6/8] (3.45ns)   --->   "%tmp_4 = fadd float %A_read, %B_read" [D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:50]   --->   Operation 31 'fadd' 'tmp_4' <Predicate = (!exitcond_flatten)> <Delay = 3.45> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 3.45>
+ST_7 : Operation 32 [5/8] (3.45ns)   --->   "%tmp_4 = fadd float %A_read, %B_read" [D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:50]   --->   Operation 32 'fadd' 'tmp_4' <Predicate = (!exitcond_flatten)> <Delay = 3.45> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 3.45>
+ST_8 : Operation 33 [4/8] (3.45ns)   --->   "%tmp_4 = fadd float %A_read, %B_read" [D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:50]   --->   Operation 33 'fadd' 'tmp_4' <Predicate = (!exitcond_flatten)> <Delay = 3.45> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 3.45>
+ST_9 : Operation 34 [3/8] (3.45ns)   --->   "%tmp_4 = fadd float %A_read, %B_read" [D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:50]   --->   Operation 34 'fadd' 'tmp_4' <Predicate = (!exitcond_flatten)> <Delay = 3.45> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 3.45>
+ST_10 : Operation 35 [2/8] (3.45ns)   --->   "%tmp_4 = fadd float %A_read, %B_read" [D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:50]   --->   Operation 35 'fadd' 'tmp_4' <Predicate = (!exitcond_flatten)> <Delay = 3.45> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 3.45>
+ST_11 : Operation 36 [1/8] (3.45ns)   --->   "%tmp_4 = fadd float %A_read, %B_read" [D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:50]   --->   Operation 36 'fadd' 'tmp_4' <Predicate = (!exitcond_flatten)> <Delay = 3.45> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 1.82>
+ST_12 : Operation 37 [1/1] (0.00ns)   --->   "%tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str2) nounwind" [D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:50]   --->   Operation 37 'specregionbegin' 'tmp_1' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_12 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:49]   --->   Operation 38 'specpipeline' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_12 : Operation 39 [1/1] (1.82ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %C, float %tmp_4) nounwind" [D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:50]   --->   Operation 39 'write' <Predicate = (!exitcond_flatten)> <Delay = 1.82> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_12 : Operation 40 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str2, i32 %tmp_1) nounwind" [D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:50]   --->   Operation 40 'specregionend' 'empty' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_12 : Operation 41 [1/1] (0.00ns)   --->   "br label %.preheader" [D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:48]   --->   Operation 41 'br' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+
+State 13 <SV = 2> <Delay = 0.00>
+ST_13 : Operation 42 [1/1] (0.00ns)   --->   "ret void" [D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:52]   --->   Operation 42 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 1.35ns.
+
+ <State 1>: 0.656ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('indvar_flatten') with incoming values : ('indvar_flatten_next') [14]  (0.656 ns)
+
+ <State 2>: 0.944ns
+The critical path consists of the following:
+	'phi' operation ('indvar_flatten') with incoming values : ('indvar_flatten_next') [14]  (0 ns)
+	'icmp' operation ('exitcond_flatten') [15]  (0.944 ns)
+
+ <State 3>: 1.83ns
+The critical path consists of the following:
+	fifo read on port 'A' (D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:50) [21]  (1.83 ns)
+
+ <State 4>: 3.45ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_4', D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:50) [23]  (3.45 ns)
+
+ <State 5>: 3.45ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_4', D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:50) [23]  (3.45 ns)
+
+ <State 6>: 3.45ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_4', D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:50) [23]  (3.45 ns)
+
+ <State 7>: 3.45ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_4', D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:50) [23]  (3.45 ns)
+
+ <State 8>: 3.45ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_4', D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:50) [23]  (3.45 ns)
+
+ <State 9>: 3.45ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_4', D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:50) [23]  (3.45 ns)
+
+ <State 10>: 3.45ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_4', D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:50) [23]  (3.45 ns)
+
+ <State 11>: 3.45ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_4', D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:50) [23]  (3.45 ns)
+
+ <State 12>: 1.83ns
+The critical path consists of the following:
+	fifo write on port 'C' (D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:50) [24]  (1.83 ns)
+
+ <State 13>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

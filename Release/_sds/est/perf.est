@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<est:Report xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:est="http://www.xilinx.com/est">
+  <graph hwLatency="23172">
+    <function name="madd" file="main.cpp" line="128"/>
+    <function name="mmult" file="main.cpp" line="127"/>
+  </graph>
+  <resources>
+    <resource name="dsp" used="162" total="1728"/>
+    <resource name="bram" used="64" total="312"/>
+    <resource name="lut" used="31110" total="230400"/>
+    <resource name="ff" used="42031" total="460800"/>
+  </resources>
+</est:Report>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:data xmlns:xd="http://www.xilinx.com/xd">
+  <xd:accel name="mmult" platform="zcu104" compiler="g++" srcfile="mmult.cpp" srcpath="D:/xilinx/SDSoC_IDE/workspace/muladd/src" flags="-ID:/xilinx/SDSoC_IDE/workspace/muladd/src -ID:/xilinx/SDSoC_IDE/workspace/muladd/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__" is_debug="0" clk_id="3" ip_requires_adapter="1" ip_is_rtl="0" ip_has_repo="0" ip_has_debugxrf="0" ip_is_pfunc="0" ip_is_rtl_template="0" vlnv="" is_opencl="0" asmfile="mmult.s" esc_original_name="mmult" template_source_file="NA"/>
+</xd:data>

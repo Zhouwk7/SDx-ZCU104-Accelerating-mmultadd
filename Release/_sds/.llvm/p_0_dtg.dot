@@ -1,0 +1,41 @@
+digraph dm_graph {
+v0 [label = "v0:mmult_test" ,style=filled];
+v1 [label = "v1:XFER(IN)\nA @127\nARRAY\n" ,style=filled,fillcolor = green];
+v2 [label = "v2:XFER(IN)\nB @127\nARRAY\n" ,style=filled,fillcolor = green];
+v3 [label = "v3:call 'mmult' in 'main.cpp' @127 (async_id:-1) (resource id:-1)\n" ,style=filled,fillcolor = red];
+v4 [label = "v4:XFER(OUT)\nC @127\nDIRECT_SOURCE\n" ,style=filled,fillcolor = yellow];
+v5 [label = "v5:XFER(IN)\nA @128\nDIRECT_SINK\n" ,style=filled,fillcolor = green];
+v6 [label = "v6:XFER(IN)\nB @128\nARRAY\n" ,style=filled,fillcolor = green];
+v7 [label = "v7:call 'madd' in 'main.cpp' @128 (async_id:-1) (resource id:-1)\n" ,style=filled,fillcolor = red];
+v8 [label = "v8:XFER(OUT)\nC @128\nARRAY\n" ,style=filled,fillcolor = yellow];
+v9 [label = "v9:cf_wait(): \nXFER(IN)\nA @127\nARRAY\nXFER(IN)\nB @127\nARRAY\nXFER(IN)\nB @128\nARRAY\nXFER(OUT)\nC @128\nARRAY\n\n" ,style=filled,fillcolor = cyan];
+subgraph cluster0 {
+v1;
+v2;
+v3;
+v4;
+label = "call 'mmult' in 'main.cpp' @127 (async_id:-1) (resource id:-1)\n";
+}
+subgraph cluster1 {
+v5;
+v6;
+v7;
+v8;
+v9;
+label = "call 'madd' in 'main.cpp' @128 (async_id:-1) (resource id:-1)\n";
+}
+v1 -> v3 [label = "RAW/0"];
+v2 -> v3 [label = "RAW/0"];
+v3 -> v4 [label = "RAW/0"];
+v4 -> v5 [label = "RAW/0", color = red];
+v5 -> v7 [label = "RAW/0"];
+v6 -> v7 [label = "RAW/0"];
+v7 -> v8 [label = "RAW/0"];
+v8 -> v9 [label = "SEQ", style = dotted];
+v1 -> v5 [label = "SEQ", style = dotted];
+v2 -> v5 [label = "SEQ", style = dotted];
+v1 -> v6 [label = "SEQ", style = dotted];
+v2 -> v6 [label = "SEQ", style = dotted];
+v0 -> v1 [label = "SEQ", style = dotted];
+v0 -> v2 [label = "SEQ", style = dotted];
+}

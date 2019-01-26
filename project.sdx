@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdsproject:SDSProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdsproject="http://www.xilinx.com/sdsproject" name="muladd" location="D:/xilinx/SDSoC_IDE/workspace/muladd" platform="D:/xilinx/SDSoC_IDE/SDx/2018.3/platforms/zcu104/zcu104.xpfm" platformUID="xilinx.com:zcu104:zcu104:1.0" systemProject="muladd_system" sysConfig="a53_linux" runtime="C/C++" cpu="a53_linux" cpuInstance="" os="linux" ConfigType="Debug">
+  <configuration name="Debug" id="com.xilinx.sdsoc.managedbuild.project.debug.861299735" dirty="true">
+    <configBuildOptions xsi:type="sdsproject:Option" insertapm="false" gensdcard="true" dmclkid="3" enableHwSwTrace="false" traceApplication="false">
+      <accelerator name="madd" filepath="src/madd.cpp" clkid="3" location="D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp">
+        <args name="A"/>
+        <args name="B"/>
+        <args name="C"/>
+      </accelerator>
+      <accelerator name="mmult" filepath="src/mmult.cpp" clkid="3" location="D:/xilinx/SDSoC_IDE/workspace/muladd/src/mmult.cpp">
+        <args name="A"/>
+        <args name="B"/>
+        <args name="C"/>
+      </accelerator>
+    </configBuildOptions>
+  </configuration>
+  <configuration name="Release" id="com.xilinx.sdsoc.managedbuild.project.release.1915758715">
+    <configBuildOptions xsi:type="sdsproject:Option" insertapm="false" gensdcard="false" dmclkid="3" estimateSpeedup="true" enableHwSwTrace="false" traceApplication="false">
+      <accelerator name="mmult" filepath="src/mmult.cpp" clkid="3" location="D:/xilinx/SDSoC_IDE/workspace/muladd/src/mmult.cpp"/>
+      <accelerator name="madd" filepath="src/madd.cpp" clkid="3" location="D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp"/>
+    </configBuildOptions>
+    <lastBuildOptions xsi:type="sdsproject:Option" insertapm="false" gensdcard="false" dmclkid="3" estimateSpeedup="true" enableHwSwTrace="false" traceApplication="false">
+      <accelerator name="mmult" filepath="src/mmult.cpp" clkid="3" location="D:/xilinx/SDSoC_IDE/workspace/muladd/src/mmult.cpp"/>
+      <accelerator name="madd" filepath="src/madd.cpp" clkid="3" location="D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp"/>
+    </lastBuildOptions>
+  </configuration>
+</sdsproject:SDSProject>

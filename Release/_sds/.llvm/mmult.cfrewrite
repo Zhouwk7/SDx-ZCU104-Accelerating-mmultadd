@@ -1,0 +1,15 @@
+void p_0_mmult_1_noasync(float A[1024], float B[1024], float C[1024]);
+void p_0_mmult_1_noasync(float A[1024], float B[1024], float C[1024])
+{
+  int start_seq[1];
+  start_seq[0] = 0;
+  cf_request_handle_t p_0_hwinst_mmult_1_cmd;
+  cf_send_i(&(p_0_hwinst_mmult_1.cmd_mmult), start_seq, 1 * sizeof(int), &p_0_hwinst_mmult_1_cmd);
+  cf_wait(p_0_hwinst_mmult_1_cmd);
+
+  cf_send_i(&(p_0_hwinst_mmult_1.A), A, 4096, &p_0_request_2);
+  cf_send_i(&(p_0_hwinst_mmult_1.B), B, 4096, &p_0_request_3);
+
+
+}
+

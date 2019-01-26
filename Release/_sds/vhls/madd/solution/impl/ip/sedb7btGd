@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xd" xd:functionName="madd" xd:componentRef="madd" xd:initiationInterval="1036" xd:clockPeriod="5.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="A[]" xd:originalName="A" xd:direction="in" xd:interfaceRef="A" xd:busTypeRef="acc_fifo" xd:arraySize="1024" xd:dataWidth="32"/>
+  <xd:arg xd:name="B[]" xd:originalName="B" xd:direction="in" xd:interfaceRef="B" xd:busTypeRef="acc_fifo" xd:arraySize="1024" xd:dataWidth="32"/>
+  <xd:arg xd:name="C[]" xd:originalName="C" xd:direction="out" xd:interfaceRef="C" xd:busTypeRef="acc_fifo" xd:firstOut="11" xd:arraySize="1024" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="1035" xd:worst-case="1035" xd:average-case="1035"/>
+  <xd:resourceEstimates xd:LUT="387" xd:FF="482" xd:BRAM="0" xd:DSP="2"/>
+</xd:acceleratorMap>

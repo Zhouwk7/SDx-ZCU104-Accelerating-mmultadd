@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"a0_madd": {
+			"proto_instances": {
+			}
+		}
+	}
+}

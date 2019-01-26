@@ -1,0 +1,84 @@
+bb0
+|SW(51)@0\n  %6 = alloca %class.perf_counter, align 8
+|SW(52)@0\n  %7 = alloca %class.perf_counter, align 8
+|SW(53)@0\n  %8 = alloca [1024 x float], align 4
+|SW(54)@0\n  %9 = alloca [1024 x float], align 4
+|SW(55)@109\n  call void @llvm.dbg.value(metadata float* %0, i64 0, metadata !1208, metadata !1025), !dbg !1209
+|SW(56)@109\n  call void @llvm.dbg.value(metadata float* %1, i64 0, metadata !1210, metadata !1025), !dbg !1211
+|SW(57)@109\n  call void @llvm.dbg.value(metadata float* %2, i64 0, metadata !1212, metadata !1025), !dbg !1213
+|SW(58)@109\n  call void @llvm.dbg.value(metadata float* %3, i64 0, metadata !1214, metadata !1025), !dbg !1215
+|SW(59)@109\n  call void @llvm.dbg.value(metadata float* %4, i64 0, metadata !1216, metadata !1025), !dbg !1217
+|SW(3)@111\n  %10 = call dereferenceable(272) %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* dereferenceable(272) @_ZSt4cout, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str, i32 0, i32 0)), !dbg !1034
+|SW(4)@111\n  %11 = call dereferenceable(272) %"class.std::basic_ostream"* @_ZNSolsEi(%"class.std::basic_ostream"* %10, i32 1024), !dbg !1035
+|SW(5)@111\n  %12 = call dereferenceable(272) %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* dereferenceable(272) %11, i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str.1, i32 0, i32 0)), !dbg !1037
+|SW(6)@111\n  %13 = call dereferenceable(272) %"class.std::basic_ostream"* @_ZNSolsEi(%"class.std::basic_ostream"* %12, i32 32), !dbg !1039
+|SW(7)@111\n  %14 = call dereferenceable(272) %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* dereferenceable(272) %13, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.2, i32 0, i32 0)), !dbg !1041
+|SW(8)@111\n  %15 = call dereferenceable(272) %"class.std::basic_ostream"* @_ZNSolsEi(%"class.std::basic_ostream"* %14, i32 32), !dbg !1043
+|SW(9)@112\n  %16 = call dereferenceable(272) %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* dereferenceable(272) %15, i8* getelementptr inbounds ([28 x i8], [28 x i8]* @.str.3, i32 0, i32 0)), !dbg !1045
+|SW(10)@112\n  %17 = call dereferenceable(272) %"class.std::basic_ostream"* @_ZNSolsEPFRSoS_E(%"class.std::basic_ostream"* %16, %"class.std::basic_ostream"* (%"class.std::basic_ostream"*)* @_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_), !dbg !1046
+|SW(60)@114\n  call void @llvm.dbg.declare(metadata %class.perf_counter* %6, metadata !1231, metadata !1025), !dbg !1247
+|SW(11)@114\n  call void @_ZN12perf_counterC2Ev(%class.perf_counter* %6), !dbg !1063
+|SW(61)@114\n  call void @llvm.dbg.declare(metadata %class.perf_counter* %7, metadata !1248, metadata !1025), !dbg !1249
+|SW(12)@114\n  call void @_ZN12perf_counterC2Ev(%class.perf_counter* %7), !dbg !1066
+|SW(62)@116\n  call void @llvm.dbg.value(metadata i32 0, i64 0, metadata !1251, metadata !1025), !dbg !1253
+|SW(63)@116\n  br label %18, !dbg !1070
+bb1
+|SW(64)@0\n  %.01 = phi i32 [ 0, %5 ], [ %30, %29 ]
+|SW(65)@116\n  %19 = icmp slt i32 %.01, 1024, !dbg !1071
+|SW(66)@116\n  br i1 %19, label %20, label %31, !dbg !1074
+bb2
+|SW(13)@118\n  call void @_ZL11init_arraysPfS_S_S_S_(float* %0, float* %1, float* %2, float* %3, float* %4), !dbg !1075
+|SW(67)@120\n  call void @llvm.dbg.declare(metadata [1024 x float]* %8, metadata !1261, metadata !1025), !dbg !1265
+|SW(68)@120\n  call void @llvm.dbg.declare(metadata [1024 x float]* %9, metadata !1266, metadata !1025), !dbg !1267
+|SW(14)@121\n  call void @_ZN12perf_counter5startEv(%class.perf_counter* %7), !dbg !1084
+|SW(69)@122\n  %21 = getelementptr inbounds [1024 x float], [1024 x float]* %8, i32 0, i32 0, !dbg !1085
+|SW(15)@122\n  call void @_Z12mmult_goldenPfS_S_(float* %0, float* %1, float* %21), !dbg !1086
+|SW(70)@123\n  %22 = getelementptr inbounds [1024 x float], [1024 x float]* %8, i32 0, i32 0, !dbg !1087
+|SW(16)@123\n  call void @_Z11madd_goldenPfS_S_(float* %22, float* %2, float* %4), !dbg !1088
+|SW(17)@124\n  call void @_ZN12perf_counter4stopEv(%class.perf_counter* %7), !dbg !1089
+|SW(18)@126\n  call void @_ZN12perf_counter5startEv(%class.perf_counter* %6), !dbg !1090
+|SW(71)@127\n  %23 = getelementptr inbounds [1024 x float], [1024 x float]* %9, i32 0, i32 0, !dbg !1091
+|XFER(IN)\nA @127\nARRAY\n
+|XFER(IN)\nB @127\nARRAY\n
+|call 'mmult' in 'main.cpp' @127 (async_id:-1) (resource id:-1)\n
+|XFER(OUT)\nC @127\nDIRECT_SOURCE\n
+|SW(72)@128\n  %24 = getelementptr inbounds [1024 x float], [1024 x float]* %9, i32 0, i32 0, !dbg !1093
+|XFER(IN)\nA @128\nDIRECT_SINK\n
+|XFER(IN)\nB @128\nARRAY\n
+|call 'madd' in 'main.cpp' @128 (async_id:-1) (resource id:-1)\n
+|XFER(OUT)\nC @128\nARRAY\n
+|cf_wait(): \nXFER(IN)\nA @127\nARRAY\nXFER(IN)\nB @127\nARRAY\nXFER(IN)\nB @128\nARRAY\nXFER(OUT)\nC @128\nARRAY\n\n
+|SW(19)@129\n  call void @_ZN12perf_counter4stopEv(%class.perf_counter* %6), !dbg !1095
+|SW(20)@131\n  %25 = call i32 @_ZL12result_checkPfS_(float* %3, float* %4), !dbg !1096
+|SW(73)@131\n  %26 = icmp ne i32 %25, 0, !dbg !1096
+|SW(74)@131\n  br i1 %26, label %27, label %28, !dbg !1098
+bb3
+|SW(75)@132\n  br label %46, !dbg !1099
+bb4
+|SW(76)@133\n  br label %29, !dbg !1100
+bb5
+|SW(77)@116\n  %30 = add nsw i32 %.01, 1, !dbg !1101
+|SW(78)@116\n  call void @llvm.dbg.value(metadata i32 %30, i64 0, metadata !1251, metadata !1025), !dbg !1253
+|SW(79)@116\n  br label %18, !dbg !1103, !llvm.loop !1104
+bb6
+|SW(21)@135\n  %32 = call i64 @_ZN12perf_counter14avg_cpu_cyclesEv(%class.perf_counter* %7), !dbg !1106
+|SW(80)@135\n  call void @llvm.dbg.value(metadata i64 %32, i64 0, metadata !1291, metadata !1025), !dbg !1292
+|SW(22)@136\n  %33 = call i64 @_ZN12perf_counter14avg_cpu_cyclesEv(%class.perf_counter* %6), !dbg !1109
+|SW(81)@136\n  call void @llvm.dbg.value(metadata i64 %33, i64 0, metadata !1294, metadata !1025), !dbg !1295
+|SW(82)@137\n  %34 = uitofp i64 %32 to double, !dbg !1112
+|SW(83)@137\n  %35 = uitofp i64 %33 to double, !dbg !1113
+|SW(84)@137\n  %36 = fdiv double %34, %35, !dbg !1114
+|SW(85)@137\n  call void @llvm.dbg.value(metadata double %36, i64 0, metadata !1299, metadata !1025), !dbg !1300
+|SW(23)@139\n  %37 = call dereferenceable(272) %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* dereferenceable(272) @_ZSt4cout, i8* getelementptr inbounds ([60 x i8], [60 x i8]* @.str.4, i32 0, i32 0)), !dbg !1117
+|SW(24)@140\n  %38 = call dereferenceable(272) %"class.std::basic_ostream"* @_ZNSolsEm(%"class.std::basic_ostream"* %37, i64 %32), !dbg !1118
+|SW(25)@140\n  %39 = call dereferenceable(272) %"class.std::basic_ostream"* @_ZNSolsEPFRSoS_E(%"class.std::basic_ostream"* %38, %"class.std::basic_ostream"* (%"class.std::basic_ostream"*)* @_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_), !dbg !1119
+|SW(26)@141\n  %40 = call dereferenceable(272) %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* dereferenceable(272) @_ZSt4cout, i8* getelementptr inbounds ([60 x i8], [60 x i8]* @.str.5, i32 0, i32 0)), !dbg !1120
+|SW(27)@142\n  %41 = call dereferenceable(272) %"class.std::basic_ostream"* @_ZNSolsEm(%"class.std::basic_ostream"* %40, i64 %33), !dbg !1121
+|SW(28)@142\n  %42 = call dereferenceable(272) %"class.std::basic_ostream"* @_ZNSolsEPFRSoS_E(%"class.std::basic_ostream"* %41, %"class.std::basic_ostream"* (%"class.std::basic_ostream"*)* @_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_), !dbg !1122
+|SW(29)@143\n  %43 = call dereferenceable(272) %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* dereferenceable(272) @_ZSt4cout, i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.6, i32 0, i32 0)), !dbg !1123
+|SW(30)@143\n  %44 = call dereferenceable(272) %"class.std::basic_ostream"* @_ZNSolsEd(%"class.std::basic_ostream"* %43, double %36), !dbg !1124
+|SW(31)@143\n  %45 = call dereferenceable(272) %"class.std::basic_ostream"* @_ZNSolsEPFRSoS_E(%"class.std::basic_ostream"* %44, %"class.std::basic_ostream"* (%"class.std::basic_ostream"*)* @_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_), !dbg !1125
+|SW(86)@145\n  br label %46, !dbg !1126
+bb7
+|SW(87)@0\n  %.0 = phi i32 [ 1, %27 ], [ 0, %31 ]
+|SW(88)@146\n  ret i32 %.0, !dbg !1127

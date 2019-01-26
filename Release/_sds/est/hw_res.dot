@@ -1,0 +1,22 @@
+digraph hw {
+zcu104 [label = "zcu104", shape = box, style = filled, fillcolor = green];
+dm_0 [label = "dm_0\ndsps:0, bram:8, luts:4207, FFs:5598", shape = box, style = filled, fillcolor = yellow];
+dm_1 [label = "dm_1\ndsps:0, bram:8, luts:4207, FFs:5598", shape = box, style = filled, fillcolor = yellow];
+dm_2 [label = "dm_2\ndsps:0, bram:8, luts:4207, FFs:5598", shape = box, style = filled, fillcolor = yellow];
+dm_3 [label = "dm_3\ndsps:0, bram:8, luts:4207, FFs:5598", shape = box, style = filled, fillcolor = yellow];
+madd_1 [label = "madd_1\ndsps:2, bram:0, luts:387, FFs:482\nestimated latency: 6210", shape = box, style = filled, fillcolor = yellow];
+mmult_1 [label = "mmult_1\ndsps:160, bram:32, luts:13895, FFs:19157\nestimated latency: 13884", shape = box, style = filled, fillcolor = yellow];
+
+zcu104 -> madd_1 [label = "cmd_madd"]
+zcu104 -> dm_0 [label = "B"]
+dm_0 -> madd_1 [label = "B"]
+madd_1 -> dm_3 [label = "C"]
+dm_3 -> zcu104 [label = "C"]
+zcu104 -> mmult_1 [label = "cmd_mmult"]
+zcu104 -> dm_1 [label = "A"]
+dm_1 -> mmult_1 [label = "A"]
+zcu104 -> dm_2 [label = "B"]
+dm_2 -> mmult_1 [label = "B"]
+mmult_1 -> madd_1 [label = "C -> A"]
+graph [label = "Total Resources: dsps:162/1728, bram:64/312, luts:31110/230400, FFs:42031/460800\nFor graph with functions: madd:main.cpp:128 mmult:main.cpp:127, estimated hardware latency =  23172\n"];
+}

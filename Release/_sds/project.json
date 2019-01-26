@@ -1,0 +1,7 @@
+{
+  "project" : {
+    "id" : "0",
+    "xpfmFile" : "D:/xilinx/SDSoC_IDE/SDx/2018.3/platforms/zcu104/zcu104.xpfm",
+    "sysConfig" : "a53_linux"
+  }
+}

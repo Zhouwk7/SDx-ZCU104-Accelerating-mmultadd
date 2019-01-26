@@ -1,0 +1,22 @@
+{
+	"file":	"D:/xilinx/SDSoC_IDE/workspace/muladd/src/main.cpp",
+	"callers":	[{
+			"call":	"madd",
+			"line":	128,
+			"col":	11,
+			"repl":	"p_0_madd_1_noasync"
+		}, {
+			"call":	"mmult",
+			"line":	127,
+			"col":	11,
+			"repl":	"p_0_mmult_1_noasync"
+		}],
+	"parents":	[{
+			"function":	"mmult_test",
+			"proto":	"void p_0_madd_1_noasync(float A[1024], float B[1024], float C[1024]);\n"
+		}, {
+			"function":	"mmult_test",
+			"proto":	"void p_0_mmult_1_noasync(float A[1024], float B[1024], float C[1024]);\n"
+		}],
+	"waits":	[]
+}

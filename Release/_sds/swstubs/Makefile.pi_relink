@@ -1,0 +1,8 @@
+OUTPUT=muladd.elf
+.PHONY: relink clean
+
+relink:
+	cp muladd.elf ${OUTPUT}
+
+clean:
+	rm -f ${OUTPUT}

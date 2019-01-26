@@ -1,0 +1,87 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source D:/xilinx/SDSoC_IDE/Vivado/2018.3/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running 'D:/xilinx/SDSoC_IDE/Vivado/2018.3/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'zhouwk' on host 'desktop-qso6j6m' (Windows NT_amd64 version 6.2) on Sat Jan 26 20:50:06 +0800 2019
+INFO: [HLS 200-10] In directory 'D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls'
+INFO: [HLS 200-10] Creating and opening project 'D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd'.
+INFO: [HLS 200-10] Adding design file 'D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp' to the project
+INFO: [HLS 200-10] Creating and opening solution 'D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to ' xczu7ev-ffvc1156-2-e '
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_sdx -optimization_level=0
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_phys_opt=none
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_bind -effort=medium
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_schedule -effort=medium
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_schedule -relax_ii_for_timing=0
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_rtl -auto_prefix=1
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty 27%
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.35ns.
+INFO: [HLS 200-10] Analyzing design file 'D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:00 ; elapsed = 00:00:18 . Memory (MB): peak = 104.969 ; gain = 40.508
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:00 ; elapsed = 00:00:18 . Memory (MB): peak = 104.969 ; gain = 40.508
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:00 ; elapsed = 00:00:18 . Memory (MB): peak = 105.852 ; gain = 41.391
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:00 ; elapsed = 00:00:18 . Memory (MB): peak = 106.105 ; gain = 41.645
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:18 . Memory (MB): peak = 127.090 ; gain = 62.629
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:47:8) in function 'madd'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:19 . Memory (MB): peak = 127.090 ; gain = 62.629
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'madd' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'madd' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 11.
+WARNING: [SCHED 204-71] Latency directive discarded for region madd since it contains subloops.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 18.792 seconds; current allocated memory: 77.245 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.111 seconds; current allocated memory: 77.397 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'madd' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'madd/A' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'madd/B' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'madd/C' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'madd' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'madd_fadd_32ns_32ns_32_8_full_dsp_1' to 'madd_fadd_32ns_32bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'madd_fadd_32ns_32bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'madd'.
+INFO: [HLS 200-111]  Elapsed time: 0.161 seconds; current allocated memory: 77.753 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:21 . Memory (MB): peak = 127.090 ; gain = 62.629
+INFO: [SYSC 207-301] Generating SystemC RTL for madd with prefix a0_.
+INFO: [VHDL 208-304] Generating VHDL RTL for madd with prefix a0_.
+INFO: [VLOG 209-307] Generating Verilog RTL for madd with prefix a0_.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/xilinx/SDSoC_IDE/Vivado/2018.3/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'a0_madd_ap_fadd_6_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+create_ip: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 338.227 ; gain = 42.004
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'a0_madd_ap_fadd_6_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'a0_madd_ap_fadd_6_full_dsp_32'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/xilinx/SDSoC_IDE/Vivado/2018.3/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Sat Jan 26 20:50:54 2019...
+INFO: [HLS 200-112] Total elapsed time: 49.454 seconds; peak allocated memory: 77.753 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Sat Jan 26 20:50:54 2019...

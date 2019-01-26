@@ -1,0 +1,5 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="23" filename="D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp" linenumber="50" name="tmp_4" contextFuncName="madd" moduleName="madd" rtlName="madd_fadd_32ns_32bkb_U1" latency="7" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\xilinx\SDSoC_IDE\workspace\muladd\Release"><\/item>
+<\/annotationInfo>
+</annotationInfo>

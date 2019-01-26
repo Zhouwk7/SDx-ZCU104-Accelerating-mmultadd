@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<cf:model cf:name="top" xd:type="design" xmlns:xd="http://www.xilinx.com/xd" xmlns:cf="http://www.xilinx.com/connections">
+  <xd:device xd:BRAM="312" xd:DSP="1728" xd:FF="460800" xd:LUTs="230400"/>
+  <xd:comp xd:name="zcu104" xd:componentRef="zcu104" xd:BRAM="0" xd:DSP="0" xd:FF="0" xd:LUTs="0"/>
+  <xd:comp xd:name="dm_0" xd:componentRef="axi_dma" xd:BRAM="8" xd:DSP="0" xd:FF="5598" xd:LUTs="4207"/>
+  <xd:comp xd:name="dm_1" xd:componentRef="axi_dma" xd:BRAM="8" xd:DSP="0" xd:FF="5598" xd:LUTs="4207"/>
+  <xd:comp xd:name="dm_2" xd:componentRef="axi_dma" xd:BRAM="8" xd:DSP="0" xd:FF="5598" xd:LUTs="4207"/>
+  <xd:comp xd:name="dm_3" xd:componentRef="axi_dma" xd:BRAM="8" xd:DSP="0" xd:FF="5598" xd:LUTs="4207"/>
+  <xd:comp xd:name="madd_1" xd:componentRef="madd" xd:BRAM="0" xd:DSP="2" xd:FF="482" xd:LUTs="387"/>
+  <xd:comp xd:name="mmult_1" xd:componentRef="mmult" xd:BRAM="32" xd:DSP="160" xd:FF="19157" xd:LUTs="13895"/>
+  <xd:comp xd:name="madd_1_if" xd:componentRef="madd_if" xd:BRAM="0" xd:DSP="0" xd:FF="0" xd:LUTs="0"/>
+  <xd:comp xd:name="mmult_1_if" xd:componentRef="mmult_if" xd:BRAM="0" xd:DSP="0" xd:FF="0" xd:LUTs="0"/>
+  <xd:comp xd:name="axi_ic_ps_e_M_AXI_HPM0_FPD" xd:componentRef="axi_interconnect" xd:BRAM="-1" xd:DSP="-1" xd:FF="-1" xd:LUTs="-1"/>
+  <xd:comp xd:name="axi_ic_ps_e_S_AXI_HP2_FPD" xd:componentRef="axi_interconnect" xd:BRAM="-1" xd:DSP="-1" xd:FF="-1" xd:LUTs="-1"/>
+  <xd:comp xd:name="axi_ic_ps_e_S_AXI_HP3_FPD" xd:componentRef="axi_interconnect" xd:BRAM="-1" xd:DSP="-1" xd:FF="-1" xd:LUTs="-1"/>
+  <xd:comp xd:name="axi_ic_ps_e_S_AXI_HP1_FPD" xd:componentRef="axi_interconnect" xd:BRAM="-1" xd:DSP="-1" xd:FF="-1" xd:LUTs="-1"/>
+  <xd:comp xd:name="axi_ic_ps_e_S_AXI_HP0_FPD" xd:componentRef="axi_interconnect" xd:BRAM="-1" xd:DSP="-1" xd:FF="-1" xd:LUTs="-1"/>
+  <xd:comp xd:name="axis_dwc_dm_0_tx_0" xd:componentRef="axis_dwidth_converter" xd:BRAM="-1" xd:DSP="-1" xd:FF="-1" xd:LUTs="-1"/>
+  <xd:comp xd:name="axis_dwc_dm_1_tx_0" xd:componentRef="axis_dwidth_converter" xd:BRAM="-1" xd:DSP="-1" xd:FF="-1" xd:LUTs="-1"/>
+  <xd:comp xd:name="axis_dwc_dm_2_tx_0" xd:componentRef="axis_dwidth_converter" xd:BRAM="-1" xd:DSP="-1" xd:FF="-1" xd:LUTs="-1"/>
+  <xd:comp xd:name="axis_dwc_dm_3_rx_0" xd:componentRef="axis_dwidth_converter" xd:BRAM="-1" xd:DSP="-1" xd:FF="-1" xd:LUTs="-1"/>
+  <xd:comp xd:name="sds_irq_const" xd:componentRef="xlconstant" xd:BRAM="-1" xd:DSP="-1" xd:FF="-1" xd:LUTs="-1"/>
+</cf:model>

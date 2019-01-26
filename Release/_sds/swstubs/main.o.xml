@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:data xmlns:xd="http://www.xilinx.com/xd">
+  <xd:source name="main.cpp" compiler="g++" objfile="src/main.o" srcpath="D:/xilinx/SDSoC_IDE/workspace/muladd/src" flags="-ID:/xilinx/SDSoC_IDE/workspace/muladd/src -ID:/xilinx/SDSoC_IDE/workspace/muladd/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__" is_debug="0"/>
+</xd:data>

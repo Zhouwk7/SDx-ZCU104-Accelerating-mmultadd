@@ -1,0 +1,138 @@
+20:49:33 **** Build of configuration Release for project muladd ****
+make pre-build main-build 
+sdsoc_make_clean Release
+' '
+'Building file: ../src/madd.cpp'
+'Invoking: SDS++ Compiler'
+sds++ -Wall -O3 -I"../src" -c -fmessage-length=0 -MT"src/madd.o" -MMD -MP -MF"src/madd.d" -MT"src/madd.o" -o "src/madd.o" "../src/madd.cpp" -sds-hw mmult mmult.cpp  -clkid 3 -sds-end -sds-hw madd madd.cpp  -clkid 3 -sds-end -perf-root main -perf-est swdata.xml -perf-funcs mmult,madd -sds-sys-config a53_linux -sds-proc a53_linux -sds-pf "zcu104"
+Starting performance estimation. This may take a few minutes
+Processing -sds-hw block for madd
+Analyzing source for RTL template usage
+Create data motion intermediate representation
+
+D:\xilinx\SDSoC_IDE\workspace\muladd\Release>D:\xilinx\SDSoC_IDE\SDx\2018.3\llvm-clang\win64\llvm\bin\clang.exe -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -target aarch64-linux-gnu -mcpu=cortex-a53 -O0 -g -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include -D HLS_NO_XIL_FPO_LIB -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1 -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/aarch64-linux-gnu -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/backward -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include-fixed -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/libc/usr/include -std=c++11 -emit-llvm -S D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/src/madd.s 
+
+D:\xilinx\SDSoC_IDE\workspace\muladd\Release>exit /b 0 
+Compiling D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp
+Analyzing source for RTL template usage
+Create data motion intermediate representation
+
+D:\xilinx\SDSoC_IDE\workspace\muladd\Release>D:\xilinx\SDSoC_IDE\SDx\2018.3\llvm-clang\win64\llvm\bin\clang.exe -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -target aarch64-linux-gnu -mcpu=cortex-a53 -O0 -g -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include -D HLS_NO_XIL_FPO_LIB -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1 -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/aarch64-linux-gnu -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/backward -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include-fixed -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/libc/usr/include -std=c++11 -emit-llvm -S D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/src/madd.s 
+
+D:\xilinx\SDSoC_IDE\workspace\muladd\Release>exit /b 0 
+Performing accelerator source linting for madd
+Performing pragma generation
+
+D:\xilinx\SDSoC_IDE\workspace\muladd\Release>D:\xilinx\SDSoC_IDE\SDx\2018.3\llvm-clang\win64\llvm\bin\clang.exe -E -ID:/xilinx/SDSoC_IDE/workspace/muladd/src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -m64 -D HLS_NO_XIL_FPO_LIB -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include -ID:/xilinx/SDSoC_IDE/workspace/muladd/src -D __SDSVHLS__ -target aarch64-linux-gnu -mcpu=cortex-a53 -O0 -g -w -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include -D HLS_NO_XIL_FPO_LIB -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1 -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/aarch64-linux-gnu -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/backward -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include-fixed -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/libc/usr/include -std=c++11 D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd_pp.cpp 
+
+D:\xilinx\SDSoC_IDE\workspace\muladd\Release>exit /b 0 
+INFO: [PragmaGen 83-3231] Successfully generated tcl script: D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd.tcl
+Moving function madd to Programmable Logic
+sds++ log file saved as D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/reports/sds_madd.log
+
+'Finished building: ../src/madd.cpp'
+' '
+'Building file: ../src/main.cpp'
+'Invoking: SDS++ Compiler'
+sds++ -Wall -O3 -I"../src" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp" -sds-hw mmult mmult.cpp  -clkid 3 -sds-end -sds-hw madd madd.cpp  -clkid 3 -sds-end -perf-root main -perf-est swdata.xml -perf-funcs mmult,madd -sds-sys-config a53_linux -sds-proc a53_linux -sds-pf "zcu104"
+Starting performance estimation. This may take a few minutes
+Analyzing source for RTL template usage
+Create data motion intermediate representation
+
+D:\xilinx\SDSoC_IDE\workspace\muladd\Release>D:\xilinx\SDSoC_IDE\SDx\2018.3\llvm-clang\win64\llvm\bin\clang.exe -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -target aarch64-linux-gnu -mcpu=cortex-a53 -O0 -g -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include -D HLS_NO_XIL_FPO_LIB -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1 -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/aarch64-linux-gnu -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/backward -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include-fixed -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/libc/usr/include -std=c++11 -emit-llvm -S D:/xilinx/SDSoC_IDE/workspace/muladd/src/main.cpp -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/src/main.s 
+
+D:\xilinx\SDSoC_IDE\workspace\muladd\Release>exit /b 0 
+Compiling D:/xilinx/SDSoC_IDE/workspace/muladd/src/main.cpp
+Analyzing source for RTL template usage
+Create data motion intermediate representation
+
+D:\xilinx\SDSoC_IDE\workspace\muladd\Release>D:\xilinx\SDSoC_IDE\SDx\2018.3\llvm-clang\win64\llvm\bin\clang.exe -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -target aarch64-linux-gnu -mcpu=cortex-a53 -O0 -g -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include -D HLS_NO_XIL_FPO_LIB -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1 -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/aarch64-linux-gnu -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/backward -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include-fixed -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/libc/usr/include -std=c++11 -emit-llvm -S D:/xilinx/SDSoC_IDE/workspace/muladd/src/main.cpp -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/src/main.s 
+
+D:\xilinx\SDSoC_IDE\workspace\muladd\Release>exit /b 0 
+Compiling D:/xilinx/SDSoC_IDE/workspace/muladd/src/main.cpp
+sds++ log file saved as D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/reports/sds_main.log
+
+'Finished building: ../src/main.cpp'
+' '
+'Building file: ../src/mmult.cpp'
+'Invoking: SDS++ Compiler'
+sds++ -Wall -O3 -I"../src" -c -fmessage-length=0 -MT"src/mmult.o" -MMD -MP -MF"src/mmult.d" -MT"src/mmult.o" -o "src/mmult.o" "../src/mmult.cpp" -sds-hw mmult mmult.cpp  -clkid 3 -sds-end -sds-hw madd madd.cpp  -clkid 3 -sds-end -perf-root main -perf-est swdata.xml -perf-funcs mmult,madd -sds-sys-config a53_linux -sds-proc a53_linux -sds-pf "zcu104"
+Starting performance estimation. This may take a few minutes
+Processing -sds-hw block for mmult
+Analyzing source for RTL template usage
+Create data motion intermediate representation
+
+D:\xilinx\SDSoC_IDE\workspace\muladd\Release>D:\xilinx\SDSoC_IDE\SDx\2018.3\llvm-clang\win64\llvm\bin\clang.exe -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -target aarch64-linux-gnu -mcpu=cortex-a53 -O0 -g -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include -D HLS_NO_XIL_FPO_LIB -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1 -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/aarch64-linux-gnu -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/backward -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include-fixed -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/libc/usr/include -std=c++11 -emit-llvm -S D:/xilinx/SDSoC_IDE/workspace/muladd/src/mmult.cpp -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/src/mmult.s 
+
+D:\xilinx\SDSoC_IDE\workspace\muladd\Release>exit /b 0 
+Compiling D:/xilinx/SDSoC_IDE/workspace/muladd/src/mmult.cpp
+Analyzing source for RTL template usage
+Create data motion intermediate representation
+
+D:\xilinx\SDSoC_IDE\workspace\muladd\Release>D:\xilinx\SDSoC_IDE\SDx\2018.3\llvm-clang\win64\llvm\bin\clang.exe -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -target aarch64-linux-gnu -mcpu=cortex-a53 -O0 -g -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include -D HLS_NO_XIL_FPO_LIB -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1 -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/aarch64-linux-gnu -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/backward -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include-fixed -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/libc/usr/include -std=c++11 -emit-llvm -S D:/xilinx/SDSoC_IDE/workspace/muladd/src/mmult.cpp -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/src/mmult.s 
+
+D:\xilinx\SDSoC_IDE\workspace\muladd\Release>exit /b 0 
+Performing accelerator source linting for mmult
+Performing pragma generation
+
+D:\xilinx\SDSoC_IDE\workspace\muladd\Release>D:\xilinx\SDSoC_IDE\SDx\2018.3\llvm-clang\win64\llvm\bin\clang.exe -E -ID:/xilinx/SDSoC_IDE/workspace/muladd/src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -m64 -D HLS_NO_XIL_FPO_LIB -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include -ID:/xilinx/SDSoC_IDE/workspace/muladd/src -D __SDSVHLS__ -target aarch64-linux-gnu -mcpu=cortex-a53 -O0 -g -w -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include -D HLS_NO_XIL_FPO_LIB -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1 -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/aarch64-linux-gnu -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/backward -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include-fixed -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/libc/usr/include -std=c++11 D:/xilinx/SDSoC_IDE/workspace/muladd/src/mmult.cpp -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/mmult_pp.cpp 
+
+D:\xilinx\SDSoC_IDE\workspace\muladd\Release>exit /b 0 
+INFO: [PragmaGen 83-3231] Successfully generated tcl script: D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/mmult.tcl
+Moving function mmult to Programmable Logic
+sds++ log file saved as D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/reports/sds_mmult.log
+
+'Finished building: ../src/mmult.cpp'
+' '
+'Building target: muladd.elf'
+'Invoking: SDS++ Linker'
+sds++ --remote_ip_cache D:/xilinx/SDSoC_IDE/workspace/ip_cache -o "muladd.elf"  ./src/madd.o ./src/main.o ./src/mmult.o    -dmclkid 3  -mno-boot-files  -perf-root main -perf-est swdata.xml -perf-funcs mmult,madd -sds-sys-config a53_linux -sds-proc a53_linux -sds-pf "zcu104"
+Starting performance estimation. This may take a few minutes
+Analyzing object files
+... D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/madd.o
+... D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/main.o
+... D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/mmult.o
+Using prebuilt hardware
+Skipping block diagram (BD), address map, port information and device registration for partition 0
+Prepare hardware access API functions
+Create accelerator stub functions
+Compile hardware access API functions
+aarch64-linux-gnu-gcc       -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include  -D HLS_NO_XIL_FPO_LIB  -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/include -c  D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/sw_perf_est.c -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/sw_perf_est.o
+Compile accelerator stub functions
+Compile hardware access API functions
+aarch64-linux-gnu-gcc       -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include  -D HLS_NO_XIL_FPO_LIB  -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/include -c  D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/sw_perf_est.c -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/sw_perf_est.o
+Link application ELF file
+Analyzing object files
+... D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/.accdata/madd.o
+... D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/main.o
+... D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/.accdata/mmult.o
+Generating data motion network
+
+D:\xilinx\SDSoC_IDE\workspace\muladd\Release>D:\xilinx\SDSoC_IDE\SDx\2018.3\llvm-clang\win64\llvm\bin\llvm-link.exe -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/sds_all.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/./src/madd.s D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/./src/main.s D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/./src/mmult.s 
+
+D:\xilinx\SDSoC_IDE\workspace\muladd\Release>exit /b 0 
+
+D:\xilinx\SDSoC_IDE\workspace\muladd\Release\_sds\.llvm>opt -disable-output -mem2reg -basicaa -XidanePass --dmclkid 3 --repo D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.cdb/xd_ip_db.xml --dmdb D:/xilinx/SDSoC_IDE/SDx/2018.3/data/DM.db -os linux -processor cortex-a53 -partition 0 -perfest  0<sds_all.o 
+INFO: [DMAnalysis 83-4494] Analyzing hardware accelerators...
+INFO: [DMAnalysis 83-4497] Analyzing callers to hardware accelerators...
+INFO: [DMAnalysis 83-4444] Scheduling data transfer graph for partition 0
+INFO: [DMAnalysis 83-4446] Creating data motion network hardware for partition 0
+INFO: [DMAnalysis 83-4448] Creating software stub functions for partition 0
+INFO: [DMAnalysis 83-4450] Generating data motion network report for partition 0
+INFO: [DMAnalysis 83-4452] Generating performance estimation for partition 0
+INFO: [DMAnalysis 83-4454] Rewriting caller code
+INFO: [PerfEst 83-3803] Software run information file swdata.xml not found. Continuing without comparison to software run data
+  For graph with functions: madd:main.cpp:128 mmult:main.cpp:127
+    Estimated hardware latency = 23172
+  Estimated resource usage:
+    dsps used = 162/1728
+    bram used = 64/312
+    luts used = 31110/230400
+    FFs used = 42031/460800
+sds++ log file saved as D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/reports/sds.log
+
+'Finished building target: muladd.elf'
+' '
+
+20:53:18 Build Finished (took 3m:45s.72ms)
+

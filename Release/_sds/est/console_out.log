@@ -1,0 +1,7 @@
+  For graph with functions: madd:main.cpp:128 mmult:main.cpp:127
+    Estimated hardware latency = 23172
+  Estimated resource usage:
+    dsps used = 162/1728
+    bram used = 64/312
+    luts used = 31110/230400
+    FFs used = 42031/460800

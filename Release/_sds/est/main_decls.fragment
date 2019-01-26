@@ -1,0 +1,6 @@
+sw_function_perf_info_t _sds_sw_main = {
+  .function_name = "main",
+  .cycleCount = 0,
+  .entryCount = 0,
+  .isRoot = 1
+};

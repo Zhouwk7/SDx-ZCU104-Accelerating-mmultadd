@@ -1,0 +1,650 @@
+INFO-FLOW: Workspace D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution opened at Sat Jan 26 20:50:06 +0800 2019
+Execute   set_part  xczu7ev-ffvc1156-2-e  
+Execute     add_library xilinx/zynquplus/zynquplus:xczu7ev:-ffvc1156:-2-e  
+Execute       get_default_platform 
+Execute       license_isbetapart xczu7ev 
+Command       license_isbetapart done; error code: 1; 
+Execute       open_platform DefaultPlatform 
+Execute       import_lib D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus 
+Execute         source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/xilinx.lib 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/plb46.lib 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/fsl.lib 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/axi4.lib 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/maxi.lib 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/saxilite.lib 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/dsp48.lib 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.lib 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/ip/xfft.lib 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/ip/xfir.lib 
+Execute         source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/xilinx_old.lib 
+Execute         source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute         source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute         source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/zynquplus/dsp48e2.hlp 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 34260} {LUT 274080}   {FF 548160}  {DSP48E 2520}  {BRAM 1824} {URAM 0}  
+Execute         config_chip_info -quiet -speed medium 
+Execute         source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Command       import_lib done; 0.128 sec.
+Execute       source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute         source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute               source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source done; 0.121 sec.
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.303 sec.
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.315 sec.
+Command       ap_source done; 0.319 sec.
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 28800} {LUT 230400}   {FF 460800}  {DSP48E 1728}  {BRAM 624}  {URAM 96}  
+Execute       config_chip_info -quiet -speed medium 
+Command     add_library done; 0.485 sec.
+Execute     add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute       get_default_platform 
+Execute       open_platform DefaultPlatform 
+Execute       import_lib D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus_fpv7 
+Execute         source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/xilinx_hp.lib 
+Execute         source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute               source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute         source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus_hp.hlp 
+Execute       source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute         source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-10] Setting target device to ' xczu7ev-ffvc1156-2-e '
+Execute     get_default_platform 
+Command   set_part done; 0.654 sec.
+Execute   create_clock -period 5.000000 
+Execute     config_clock -quiet -name default -period 5 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute   config_sdx -target sds 
+Execute     send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' config_sdx -optimization_level=0 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_sdx -optimization_level=0
+Execute     config_sdx -optimization_level=0 
+Execute       get_config_export -vivado_synth_design_args 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_synth_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -optimization_level' config_export -vivado_phys_opt=none 
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_phys_opt=none
+Execute       config_export -vivado_phys_opt=none 
+Execute       get_config_bind -effort 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -optimization_level' config_bind -effort=medium 
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_bind -effort=medium
+Execute       config_bind -effort=medium 
+Execute       get_config_schedule -effort 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -optimization_level' config_schedule -effort=medium 
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_schedule -effort=medium
+Execute       config_schedule -effort=medium 
+Execute     get_config_compile -pipeline_loops 
+Execute     get_config_compile -name_max_length 
+Execute     get_config_schedule -relax_ii_for_timing 
+Execute     send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' config_schedule -relax_ii_for_timing=0 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_schedule -relax_ii_for_timing=0
+Execute     config_schedule -relax_ii_for_timing=0 
+Execute     get_config_schedule -enable_dsp_full_reg 
+Execute     get_config_rtl -register_reset_num 
+Execute     get_config_rtl -auto_prefix 
+Execute     send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' config_rtl -auto_prefix=1 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_rtl -auto_prefix=1
+Execute     config_rtl -auto_prefix=1 
+Execute     get_config_rtl -enable_maxiConservative 
+Execute     get_config_interface -m_axi_addr64 
+Execute     send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' set_clock_uncertainty 27% 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty 27%
+Execute     set_clock_uncertainty 27% 
+Execute       get_clock_period -default -name=default 
+Execute       config_clock -quiet -name default -uncertainty 1.35 -unit % 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.35ns.
+Execute   config_interface -m_axi_addr64 
+Execute   config_rtl -reset_level low 
+Execute   source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd.tcl 
+Execute     set_directive_interface -mode ap_fifo madd A 
+INFO-FLOW: Setting directive 'INTERFACE' ap_fifo=positionBoolean0mode port=positionBooleanTextRequiredA 
+Execute     set_directive_interface -mode ap_fifo madd B 
+INFO-FLOW: Setting directive 'INTERFACE' ap_fifo=positionBoolean0mode port=positionBooleanTextRequiredA 
+INFO-FLOW: Setting directive 'INTERFACE' ap_fifo=positionBoolean0mode port=positionBooleanTextRequiredB 
+Execute     set_directive_interface -mode ap_fifo madd C 
+INFO-FLOW: Setting directive 'INTERFACE' ap_fifo=positionBoolean0mode port=positionBooleanTextRequiredA 
+INFO-FLOW: Setting directive 'INTERFACE' ap_fifo=positionBoolean0mode port=positionBooleanTextRequiredB 
+INFO-FLOW: Setting directive 'INTERFACE' ap_fifo=positionBoolean0mode port=positionBooleanTextRequiredC 
+Execute     set_directive_latency -min 1 madd 
+INFO-FLOW: Setting directive 'INTERFACE' ap_fifo=positionBoolean0mode port=positionBooleanTextRequiredA 
+INFO-FLOW: Setting directive 'INTERFACE' ap_fifo=positionBoolean0mode port=positionBooleanTextRequiredB 
+INFO-FLOW: Setting directive 'INTERFACE' ap_fifo=positionBoolean0mode port=positionBooleanTextRequiredC 
+INFO-FLOW: Setting directive 'LATENCY' min=1 
+Execute   config_rtl -prefix a0_ 
+Execute   csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -lm 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     config_compile -blackbox  
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/xilinx/SDSoC_IDE/Vivado/2018.3/msys" -hls  -fno-exceptions  -D__llvm__  -E "D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp"   -ID:/xilinx/SDSoC_IDE/workspace/muladd/src -Wall -O3 -fmessage-length=0 -D__SDSCC__ -m64 -DHLS_NO_XIL_FPO_LIB -ID:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include -ID:/xilinx/SDSoC_IDE/workspace/muladd/src -D__SDSVHLS__ -D__SDSVHLS_SYNTHESIS__ -ID:/xilinx/SDSoC_IDE/workspace/muladd/Release -w  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/autopilot" -I "D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  -o "D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.pp.0.cpp" 
+INFO-FLOW: exec D:/xilinx/SDSoC_IDE/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/xilinx/SDSoC_IDE/Vivado/2018.3/msys -hls -fno-exceptions -D__llvm__ -E D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp -ID:/xilinx/SDSoC_IDE/workspace/muladd/src -Wall -O3 -fmessage-length=0 -D__SDSCC__ -m64 -DHLS_NO_XIL_FPO_LIB -ID:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include -ID:/xilinx/SDSoC_IDE/workspace/muladd/src -D__SDSVHLS__ -D__SDSVHLS_SYNTHESIS__ -ID:/xilinx/SDSoC_IDE/workspace/muladd/Release -w -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/autopilot -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.pp.0.cpp
+Command       clang done; 2.389 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec D:/xilinx/SDSoC_IDE/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.496 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "D:/xilinx/SDSoC_IDE/Vivado/2018.3/msys" -hls  -ID:/xilinx/SDSoC_IDE/workspace/muladd/src -Wall -O3 -fmessage-length=0 -D__SDSCC__ -m64 -DHLS_NO_XIL_FPO_LIB -ID:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include -ID:/xilinx/SDSoC_IDE/workspace/muladd/src -D__SDSVHLS__ -D__SDSVHLS_SYNTHESIS__ -ID:/xilinx/SDSoC_IDE/workspace/muladd/Release -w  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/autopilot" -I "D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  "D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.pp.0.cpp"  -o "D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/useless.bc"  
+INFO-FLOW: exec D:/xilinx/SDSoC_IDE/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/xilinx/SDSoC_IDE/Vivado/2018.3/msys -hls -ID:/xilinx/SDSoC_IDE/workspace/muladd/src -Wall -O3 -fmessage-length=0 -D__SDSCC__ -m64 -DHLS_NO_XIL_FPO_LIB -ID:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include -ID:/xilinx/SDSoC_IDE/workspace/muladd/src -D__SDSVHLS__ -D__SDSVHLS_SYNTHESIS__ -ID:/xilinx/SDSoC_IDE/workspace/muladd/Release -w -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/autopilot -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.pp.0.cpp -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/useless.bc
+Command       clang done; 1.079 sec.
+INFO-FLOW: Done: GCC PP time: 4 seconds per iteration
+INFO-FLOW: Setting directive 'INTERFACE' ap_fifo=positionBoolean0mode port=positionBooleanTextRequiredA 
+INFO-FLOW: Setting directive 'INTERFACE' ap_fifo=positionBoolean0mode port=positionBooleanTextRequiredB 
+INFO-FLOW: Setting directive 'INTERFACE' ap_fifo=positionBoolean0mode port=positionBooleanTextRequiredC 
+INFO-FLOW: Setting directive 'LATENCY' min=1 
+INFO-FLOW: Setting directive 'INTERFACE' ap_fifo=positionBoolean0mode port=positionBooleanTextRequiredA 
+INFO-FLOW: Setting directive 'INTERFACE' ap_fifo=positionBoolean0mode port=positionBooleanTextRequiredB 
+INFO-FLOW: Setting directive 'INTERFACE' ap_fifo=positionBoolean0mode port=positionBooleanTextRequiredC 
+INFO-FLOW: Setting directive 'LATENCY' min=1 
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.pp.0.cpp std=gnu++98 -directive=D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec D:/xilinx/SDSoC_IDE/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/.systemc_flag -quiet -fix-errors D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.pp.0.cpp std=gnu++98 -directive=D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/all.directive.json 
+INFO-FLOW: exec D:/xilinx/SDSoC_IDE/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/all.directive.json -quiet -fix-errors D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr D:/xilinx/SDSoC_IDE/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/xilinx-dataflow-lawyer.madd.pp.0.cpp.diag.yml D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/xilinx-dataflow-lawyer.madd.pp.0.cpp.out.log 2> D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/xilinx-dataflow-lawyer.madd.pp.0.cpp.err.log 
+Command       ap_eval done; 0.267 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr D:/xilinx/SDSoC_IDE/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/tidy-3.1.madd.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/tidy-3.1.madd.pp.0.cpp.out.log 2> D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/tidy-3.1.madd.pp.0.cpp.err.log 
+Command         ap_eval done; 0.119 sec.
+Execute         ap_eval exec -ignorestderr D:/xilinx/SDSoC_IDE/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/xilinx-legacy-rewriter.madd.pp.0.cpp.out.log 2> D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/xilinx-legacy-rewriter.madd.pp.0.cpp.err.log 
+Command         ap_eval done; 0.187 sec.
+Command       tidy_31 done; 0.333 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.7 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec D:/xilinx/SDSoC_IDE/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.125 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain D:/xilinx/SDSoC_IDE/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.pragma.2.cpp"  -ID:/xilinx/SDSoC_IDE/workspace/muladd/src -Wall -O3 -fmessage-length=0 -D__SDSCC__ -m64 -DHLS_NO_XIL_FPO_LIB -ID:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include -ID:/xilinx/SDSoC_IDE/workspace/muladd/src -D__SDSVHLS__ -D__SDSVHLS_SYNTHESIS__ -ID:/xilinx/SDSoC_IDE/workspace/muladd/Release -w  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/autopilot" -I "D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o "D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.bc" 
+INFO-FLOW: exec D:/xilinx/SDSoC_IDE/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/xilinx/SDSoC_IDE/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.pragma.2.cpp -ID:/xilinx/SDSoC_IDE/workspace/muladd/src -Wall -O3 -fmessage-length=0 -D__SDSCC__ -m64 -DHLS_NO_XIL_FPO_LIB -ID:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include -ID:/xilinx/SDSoC_IDE/workspace/muladd/src -D__SDSVHLS__ -D__SDSVHLS_SYNTHESIS__ -ID:/xilinx/SDSoC_IDE/workspace/muladd/Release -w -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/autopilot -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.bc
+Command       clang done; 1.02 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.g.bc -hls-opt -except-internalize madd -LD:/xilinx/SDSoC_IDE/Vivado/2018.3/win64/lib -lhlsm -lhlsmc++ -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/a.g 
+Command       llvm-ld done; 8.999 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:00 ; elapsed = 00:00:18 . Memory (MB): peak = 104.969 ; gain = 40.508
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:00 ; elapsed = 00:00:18 . Memory (MB): peak = 104.969 ; gain = 40.508
+Execute       get_config_sdx -target 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/a.pp.bc -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/a.pp.0.bc -f 
+Execute         llvm-ld D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/a.pp.0.bc -disable-opt -LD:/xilinx/SDSoC_IDE/Vivado/2018.3/win64/lib -lfloatconversion -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/a.g.0 
+Command         llvm-ld done; 0.542 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -lower-blackbox -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top madd -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/a.g.0.bc -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:00 ; elapsed = 00:00:18 . Memory (MB): peak = 105.852 ; gain = 41.391
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/a.g.1.bc -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/a.g.2.prechk.bc -f 
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/a.g.2.prechk.bc -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:00 ; elapsed = 00:00:18 . Memory (MB): peak = 106.105 ; gain = 41.645
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/a.g.1.bc to D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/a.o.1.bc -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/a.o.1.tmp.bc -f 
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/a.o.1.tmp.bc -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:18 . Memory (MB): peak = 127.090 ; gain = 62.629
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -cdfg-build D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/a.o.2.bc -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:47:8) in function 'madd'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:19 . Memory (MB): peak = 127.090 ; gain = 62.629
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 0.905 sec.
+Command     elaborate done; 15.919 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'madd' ...
+Execute       ap_set_top_model madd 
+Execute       get_model_list madd -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model madd 
+Execute       get_model_list madd -filter all-wo-channel 
+INFO-FLOW: Model list for configure: madd
+INFO-FLOW: Configuring Module : madd ...
+Execute       set_default_model madd 
+Execute       apply_spec_resource_limit madd 
+INFO-FLOW: Model list for preprocess: madd
+INFO-FLOW: Preprocessing Module: madd ...
+Execute       set_default_model madd 
+Execute       cdfg_preprocess -model madd 
+Execute       rtl_gen_preprocess madd 
+INFO-FLOW: Model list for synthesis: madd
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'madd' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model madd 
+Execute       schedule -model madd 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 11.
+WARNING: [SCHED 204-71] Latency directive discarded for region madd since it contains subloops.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.209 sec.
+INFO: [HLS 200-111]  Elapsed time: 18.792 seconds; current allocated memory: 77.245 MB.
+Execute       report -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.verbose.sched.rpt -verbose -f 
+Execute       db_write -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.sched.adb -f 
+INFO-FLOW: Finish scheduling madd.
+Execute       set_default_model madd 
+Execute       bind -model madd 
+BIND OPTION: effort=medium
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=madd
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.111 seconds; current allocated memory: 77.397 MB.
+Execute       report -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.verbose.bind.rpt -verbose -f 
+Execute       db_write -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.bind.adb -f 
+INFO-FLOW: Finish binding madd.
+Execute       get_model_list madd -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess madd 
+INFO-FLOW: Model list for RTL generation: madd
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'madd' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       create_rtl_model madd -vendor xilinx -mg_file D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'madd/A' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'madd/B' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'madd/C' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'madd' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'madd_fadd_32ns_32ns_32_8_full_dsp_1' to 'madd_fadd_32ns_32bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'madd_fadd_32ns_32bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'madd'.
+INFO: [HLS 200-111]  Elapsed time: 0.161 seconds; current allocated memory: 77.753 MB.
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.rtl_wrap.cfg.tcl 
+Execute       gen_rtl madd -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/syn/systemc/a0_madd -synmodules madd 
+Execute       gen_rtl madd -istop -style xilinx -f -lang vhdl -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/syn/vhdl/a0_madd 
+Execute       gen_rtl madd -istop -style xilinx -f -lang vlog -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/syn/verilog/a0_madd 
+Execute       export_constraint_db -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.constraint.tcl -f -tool general 
+Execute       report -model madd -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.design.xml -verbose -f -dv 
+Execute       report -model madd -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.sdaccel.xml -verbose -f -sdaccel 
+Execute       gen_tb_info madd -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd -p D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db 
+Execute       report -model madd -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/syn/report/madd_csynth.rpt -f 
+Execute       report -model madd -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/syn/report/madd_csynth.xml -f -x 
+Execute       report -model madd -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.verbose.rpt -verbose -f 
+Execute       db_write -model madd -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.adb -f 
+Execute       sc_get_clocks madd 
+Execute       get_config_export -vivado_clock 
+Execute       sc_get_portdomain madd 
+INFO-FLOW: Model list for RTL component generation: madd
+INFO-FLOW: Handling components in module [madd] ... 
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.compgen.tcl 
+INFO-FLOW: Found component a0_madd_fadd_32ns_32bkb.
+INFO-FLOW: Append model a0_madd_fadd_32ns_32bkb
+INFO-FLOW: Append model madd
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: a0_madd_fadd_32ns_32bkb madd
+INFO-FLOW: To file: write model a0_madd_fadd_32ns_32bkb
+INFO-FLOW: To file: write model madd
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl
+Execute       source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute         source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute       source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+Execute       source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute         source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute               source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source done; 0.11 sec.
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.159 sec.
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.163 sec.
+Command       ap_source done; 0.163 sec.
+Execute       source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute         source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=5.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.compgen.tcl 
+Command       ap_source done; 0.262 sec.
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl
+Execute       source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute         source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute       source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+Execute       source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute         source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute               source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source done; 0.109 sec.
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.157 sec.
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.16 sec.
+Command       ap_source done; 0.16 sec.
+Execute       source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute         source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=madd xml_exists=0
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.rtl_wrap.cfg.tcl 
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.rtl_wrap.cfg.tcl 
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.rtl_wrap.cfg.tcl 
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.tbgen.tcl 
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.compgen.tcl 
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.constraint.tcl 
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=8
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=3
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=2 #gSsdmPorts=8
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.tbgen.tcl 
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.tbgen.tcl 
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_export -xo 
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.constraint.tcl 
+Execute       sc_get_clocks madd 
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+Execute       source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/impl/misc/a0_madd_ap_fadd_6_full_dsp_32_ip.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       ::config_rtl 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist: D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:21 . Memory (MB): peak = 127.090 ; gain = 62.629
+INFO: [SYSC 207-301] Generating SystemC RTL for madd with prefix a0_.
+INFO: [VHDL 208-304] Generating VHDL RTL for madd with prefix a0_.
+INFO: [VLOG 209-307] Generating Verilog RTL for madd with prefix a0_.
+Command     autosyn done; 2.255 sec.
+Execute     get_part 
+Execute     get_config_export -sdx_tcl 
+Command   csynth_design done; 18.199 sec.
+Execute   export_design -ipname madd 
+Execute     get_config_export -acc 
+Execute     get_config_export -clock_margin 
+Execute     get_config_export -custom_script 
+Execute     get_config_export -description 
+Execute     get_config_export -display_name 
+Execute     get_config_export -driver_input_dir 
+Execute     get_config_export -format 
+Execute     get_config_export -kernel_drc 
+Execute     get_config_export -library 
+Execute     get_config_export -qor_test 
+Execute     get_config_export -rtl 
+Execute     get_config_export -sdaccel 
+Execute     get_config_export -sim 
+Execute     get_config_export -taxonomy 
+Execute     get_config_export -use_ip 
+Execute     get_config_export -use_netlist 
+Execute     get_config_export -vendor 
+Execute     get_config_export -version 
+Execute     get_config_export -xo 
+Execute     config_export -ipname=madd 
+INFO-FLOW: DBG:CMD: export_design_wrap: -ipname madd
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+Execute     get_config_export -vivado_clock 
+Execute     get_top 
+Execute     get_config_sdx -target 
+INFO-FLOW: DBG:CMD:   auto_impl: pack: -export -sdx-target sds
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl
+Execute     source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute       source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute     source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.107 sec.
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.154 sec.
+Execute         source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.157 sec.
+Command     ap_source done; 0.157 sec.
+Execute     source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: automg_wrap -export -pcore_version 1.00.a -rtl both -sdx-target sds -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:CMD:     auto_generate -export -pcore_version 1.00.a -rtl both -sdx-target sds -tool Vivado -impltomg_flag
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl
+Execute     source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute       source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute     source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.112 sec.
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.16 sec.
+Execute         source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.163 sec.
+Command     ap_source done; 0.163 sec.
+Execute     source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.compgen.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.constraint.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=8
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=3
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=0 g_has_adaptors=false generate_bd_files=0 #modelList=2 #gSsdmPorts=8
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.tbgen.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.tbgen.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+Execute     get_config_sdx -target 
+Execute     get_config_export -xo 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.constraint.tcl 
+Execute     sc_get_clocks madd 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/impl/misc/a0_madd_ap_fadd_6_full_dsp_32_ip.tcl 
+Execute     get_config_sdx -target 
+Execute     get_config_sdx -profile 
+Execute     ::config_rtl 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist: D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       generate_ip_script #gSsdmPorts=8
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.tbgen.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.tbgen.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+Execute     get_config_sdx -target 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_auxiliary
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=madd
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.rtl_wrap.cfg.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.rtl_wrap.cfg.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.rtl_wrap.cfg.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.tbgen.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.tbgen.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_top_info
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=madd
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.rtl_wrap.cfg.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.rtl_wrap.cfg.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.rtl_wrap.cfg.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.tbgen.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.tbgen.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.tbgen.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.constraint.tcl 
+INFO-FLOW: DBG:CMD:       generate_ipi_example_script
+INFO-FLOW: DBG:CMD:       generate_syn_sh
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       generate_imp_constraints
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.constraint.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.tbgen.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.constraint.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/madd.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       copy-tb-rtl-files
+INFO-FLOW: DBG:CMD:       copy-tb-data-files
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO-FLOW: DBG:CMD: read_platform_lib D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl
+Execute     source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute       source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute     source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute     source D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/.autopilot/db/global.setting.tcl 
+Execute     source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.113 sec.
+Execute           source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.161 sec.
+Execute         source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.164 sec.
+Command     ap_source done; 0.164 sec.
+Execute     source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source D:/xilinx/SDSoC_IDE/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:     exec D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/impl/ip/pack.bat
+Command   export_design done; 28.613 sec.
+Execute   cleanup_all 

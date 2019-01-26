@@ -1,0 +1,1 @@
+  add_sw_perf_function(&_sds_sw_main);

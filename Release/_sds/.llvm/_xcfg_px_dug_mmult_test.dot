@@ -1,0 +1,24 @@
+digraph defuse_graph {
+v0 [label = "v0:DEF:(  %3 = call i8* @sds_alloc(i32 4096), !dbg !1030)\nby SW(13)@118" ,style=filled];
+v1 [label = "v1:DEF:(  %5 = call i8* @sds_alloc(i32 4096), !dbg !1034)\nby SW(13)@118" ,style=filled];
+v2 [label = "v2:DEF:(  %7 = call i8* @sds_alloc(i32 4096), !dbg !1038)\nby SW(13)@118" ,style=filled];
+v3 [label = "v3:DEF:(  %9 = call i8* @sds_alloc(i32 4096), !dbg !1042)\nby SW(13)@118" ,style=filled];
+v4 [label = "v4:USE:(  %3 = call i8* @sds_alloc(i32 4096), !dbg !1030)\nby SW(15)@122" ,style=filled];
+v5 [label = "v5:USE:(  %5 = call i8* @sds_alloc(i32 4096), !dbg !1034)\nby SW(15)@122" ,style=filled];
+v6 [label = "v6:USE:(  %7 = call i8* @sds_alloc(i32 4096), !dbg !1038)\nby SW(16)@123" ,style=filled];
+v7 [label = "v7:USE:(  %3 = call i8* @sds_alloc(i32 4096), !dbg !1030)\nby HW(mmult)@127" ,style=filled];
+v8 [label = "v8:USE:(  %5 = call i8* @sds_alloc(i32 4096), !dbg !1034)\nby HW(mmult)@127" ,style=filled];
+v9 [label = "v9:DEF:(  %9 = alloca [1024 x float], align 4)\nby HW(mmult)@127" ,style=filled];
+v10 [label = "v10:USE:(  %9 = alloca [1024 x float], align 4)\nby HW(madd)@128" ,style=filled];
+v11 [label = "v11:USE:(  %7 = call i8* @sds_alloc(i32 4096), !dbg !1038)\nby HW(madd)@128" ,style=filled];
+v12 [label = "v12:DEF:(  %9 = call i8* @sds_alloc(i32 4096), !dbg !1042)\nby HW(madd)@128" ,style=filled];
+v13 [label = "v13:USE:(  %9 = call i8* @sds_alloc(i32 4096), !dbg !1042)\nby SW(20)@131" ,style=filled];
+v0 -> v4;
+v1 -> v5;
+v2 -> v6;
+v0 -> v7;
+v1 -> v8;
+v9 -> v10;
+v2 -> v11;
+v12 -> v13;
+}

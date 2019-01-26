@@ -1,0 +1,32 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <name>
+        <value string="solution"/>
+    </name>
+    <project>
+        <value string="mmult"/>
+    </project>
+    <targetInfo>
+        <TargetInfo value="xczu7ev:-ffvc1156:-2-e"/>
+    </targetInfo>
+    <libraryList>
+        <library value="xilinx/zynquplus/zynquplus" name="DefaultPlatform"/>
+        <library value="xilinx/zynquplus/zynquplus_fpv7" name="DefaultPlatform"/>
+    </libraryList>
+    <config>
+        <config_sdx target="sds" optimization_level="0"/>
+        <config_export vivado_phys_opt="none" ipname="mmult"/>
+        <config_bind effort="medium"/>
+        <config_schedule effort="medium" relax_ii_for_timing="0"/>
+        <config_rtl auto_prefix="1" reset_level="low" prefix="a1_"/>
+        <config_interface m_axi_addr64="1"/>
+        <config_compile blackbox=""/>
+        <schedule model="mmult"/>
+    </config>
+    <clockList>
+        <clock default="false" name="default" uncertainty="27%" period="5.000000"/>
+    </clockList>
+    <ExportDesign askAgain="true" evaluate="false" rtl="verilog" formatName="ipcatalog">
+        <Format formatName="ipcatalog"/>
+    </ExportDesign>
+</AutoPilot:solution>
+

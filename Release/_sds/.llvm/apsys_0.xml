@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<cf:model cf:cpu="cortex_a53" cf:partition="0" cf:prefix="p_0_" cf:name="top" xd:type="design" xmlns:xd="http://www.xilinx.com/xd" xmlns:cf="http://www.xilinx.com/connections">
+  <cf:block cf:name="hwblk_madd">
+    <cf:port cf:name="cmd_madd" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="A" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="B" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="C" cf:portType="stream" cf:direction="out"/>
+  </cf:block>
+  <cf:block cf:name="swblk_madd">
+    <cf:port cf:name="cmd_madd" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="A" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="B" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="C" cf:portType="stream" cf:direction="in"/>
+  </cf:block>
+  <cf:block cf:name="hwblk_mmult">
+    <cf:port cf:name="cmd_mmult" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="A" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="B" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="C" cf:portType="stream" cf:direction="out"/>
+  </cf:block>
+  <cf:block cf:name="swblk_mmult">
+    <cf:port cf:name="cmd_mmult" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="A" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="B" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="C" cf:portType="stream" cf:direction="in"/>
+  </cf:block>
+  <cf:comp cf:name="zcu104" xd:componentRef="zcu104" xd:clockId="3"/>
+  <cf:comp cf:name="dm_0" xd:componentRef="axi_dma"/>
+  <cf:comp cf:name="dm_1" xd:componentRef="axi_dma"/>
+  <cf:comp cf:name="dm_2" xd:componentRef="axi_dma"/>
+  <cf:comp cf:name="dm_3" xd:componentRef="axi_dma"/>
+  <cf:comp cf:name="madd_1" xd:componentRef="madd" xd:clockId="3"/>
+  <cf:comp cf:name="mmult_1" xd:componentRef="mmult" xd:clockId="3"/>
+  <cf:instance cf:name="hwinst_madd_1" cf:blockName="hwblk_madd" cf:compName="madd_1">
+    <cf:portMap cf:blockPort="cmd_madd" cf:compPort="ap_ctrl" xd:register="0x8"/>
+    <cf:portMap cf:blockPort="A" cf:compPort="A" xd:paddedWidth="32"/>
+    <cf:portMap cf:blockPort="B" cf:compPort="B" xd:paddedWidth="32"/>
+    <cf:portMap cf:blockPort="C" cf:compPort="C" xd:paddedWidth="32"/>
+  </cf:instance>
+  <cf:instance cf:name="swinst_madd_1" cf:blockName="swblk_madd" cf:compName="zcu104">
+    <cf:portMap cf:blockPort="cmd_madd" cf:compPort="ps_e_M_AXI_HPM0_FPD"/>
+    <cf:portMap cf:blockPort="B" cf:compPort="ps_e_S_AXI_HP2_FPD" cf:sptag="HP"/>
+    <cf:portMap cf:blockPort="C" cf:compPort="ps_e_S_AXI_HP3_FPD" cf:sptag="HP"/>
+  </cf:instance>
+  <cf:instance cf:name="hwinst_mmult_1" cf:blockName="hwblk_mmult" cf:compName="mmult_1">
+    <cf:portMap cf:blockPort="cmd_mmult" cf:compPort="ap_ctrl" xd:register="0x8"/>
+    <cf:portMap cf:blockPort="A" cf:compPort="A" xd:paddedWidth="32"/>
+    <cf:portMap cf:blockPort="B" cf:compPort="B" xd:paddedWidth="32"/>
+    <cf:portMap cf:blockPort="C" cf:compPort="C" xd:paddedWidth="32"/>
+  </cf:instance>
+  <cf:instance cf:name="swinst_mmult_1" cf:blockName="swblk_mmult" cf:compName="zcu104">
+    <cf:portMap cf:blockPort="cmd_mmult" cf:compPort="ps_e_M_AXI_HPM0_FPD"/>
+    <cf:portMap cf:blockPort="A" cf:compPort="ps_e_S_AXI_HP1_FPD" cf:sptag="HP"/>
+    <cf:portMap cf:blockPort="B" cf:compPort="ps_e_S_AXI_HP0_FPD" cf:sptag="HP"/>
+  </cf:instance>
+  <cf:connection cf:srcInst="swinst_madd_1" cf:srcPort="cmd_madd" cf:dstInst="hwinst_madd_1" cf:dstPort="cmd_madd">
+    <cf:dataMover cf:compName="zcu104" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_madd_1" cf:srcPort="B" cf:dstInst="hwinst_madd_1" cf:dstPort="B">
+    <cf:dataMover cf:compName="dm_0" cf:softwareLib="axi_dma_simple"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="hwinst_madd_1" cf:srcPort="C" cf:dstInst="swinst_madd_1" cf:dstPort="C">
+    <cf:dataMover cf:compName="dm_3" cf:softwareLib="axi_dma_simple"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_mmult_1" cf:srcPort="cmd_mmult" cf:dstInst="hwinst_mmult_1" cf:dstPort="cmd_mmult">
+    <cf:dataMover cf:compName="zcu104" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_mmult_1" cf:srcPort="A" cf:dstInst="hwinst_mmult_1" cf:dstPort="A">
+    <cf:dataMover cf:compName="dm_1" cf:softwareLib="axi_dma_simple"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_mmult_1" cf:srcPort="B" cf:dstInst="hwinst_mmult_1" cf:dstPort="B">
+    <cf:dataMover cf:compName="dm_2" cf:softwareLib="axi_dma_simple"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="hwinst_mmult_1" cf:srcPort="C" cf:dstInst="hwinst_madd_1" cf:dstPort="A"/>
+</cf:model>

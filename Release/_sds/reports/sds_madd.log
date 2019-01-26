@@ -1,0 +1,146 @@
+(c) Copyright 2012-2018 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2018.3 SW Build 2405991 on Thu Dec  6 23:39:10 MST 2018
+# Start time    : Sat Jan 26 20:49:35 +0800 2019
+# Command line  : sds++ -Wall -O3 -I../src -c -fmessage-length=0 -MTsrc/madd.o -MMD -MP -MFsrc/madd.d -MTsrc/madd.o -o src/madd.o ../src/madd.cpp -sds-hw mmult mmult.cpp -clkid 3 -sds-end -sds-hw madd madd.cpp -clkid 3 -sds-end -perf-root main -perf-est swdata.xml -perf-funcs mmult,madd -sds-sys-config a53_linux -sds-proc a53_linux -sds-pf zcu104
+# Log file      : D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/reports/sds_madd.log
+# Journal file  : D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/reports/sds_madd.jou
+# Report file   : D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/reports/sds_madd.rpt
+#-----------------------------------------------------------
+
+D:/xilinx/SDSoC_IDE/SDx/2018.3/bin/perf_instrumenter  -r main  -funclist mmult,madd  -tempfunclist mmult;madd  -w D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est  -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/madd.cpp  D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/unix_madd.cpp  --  -c  -I D:/xilinx/SDSoC_IDE/workspace/muladd/src  -I../src  -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__  -target aarch64-linux-gnu -mcpu=cortex-a53 -O0 -g -w      -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include  -D HLS_NO_XIL_FPO_LIB  -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/include   -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1 -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/aarch64-linux-gnu -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/backward -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include-fixed -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/libc/usr/include  -std=c++11
+Analyzing source for RTL template usage
+D:/xilinx/SDSoC_IDE/SDx/2018.3/bin/rtl_template_extract  D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp  -save-query D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/src/madd.rtlx  --  -c  -I../src  -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__  
+    -target aarch64-linux-gnu -mcpu=cortex-a53 -O0 -g -w      -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include  -D HLS_NO_XIL_FPO_LIB  -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/include   -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1 -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/aarch64-linux-gnu -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/backward -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include-fixed -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/libc/usr/include  -std=c++11
+Create data motion intermediate representation
+D:/xilinx/SDSoC_IDE/SDx/2018.3/bin/clang_wrapper  -I../src  -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__  -target aarch64-linux-gnu -mcpu=cortex-a53 -O0 -g       -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include  -D HLS_NO_XIL_FPO_LIB  -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/include   -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1 -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/aarch64-linux-gnu -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/backward -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include-fixed -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/libc/usr/include  -std=c++11  -emit-llvm -S D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/src/madd.s
+
+D:\xilinx\SDSoC_IDE\workspace\muladd\Release>D:\xilinx\SDSoC_IDE\SDx\2018.3\llvm-clang\win64\llvm\bin\clang.exe -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -target aarch64-linux-gnu -mcpu=cortex-a53 -O0 -g -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include -D HLS_NO_XIL_FPO_LIB -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1 -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/aarch64-linux-gnu -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/backward -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include-fixed -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/libc/usr/include -std=c++11 -emit-llvm -S D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/src/madd.s 
+
+D:\xilinx\SDSoC_IDE\workspace\muladd\Release>exit /b 0 
+Compiling D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp
+aarch64-linux-gnu-g++ -c -I../src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__ -MTD:/xilinx/SDSoC_IDE/workspace/muladd/Release/src/madd.o -MFD:/xilinx/SDSoC_IDE/workspace/muladd/Release/src/madd.d -MTD:/xilinx/SDSoC_IDE/workspace/muladd/Release/src/madd.o -I D:/xilinx/SDSoC_IDE/workspace/muladd/src -I D:/xilinx/SDSoC_IDE/workspace/muladd/Release       -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include  -D HLS_NO_XIL_FPO_LIB  -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/include D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/madd.cpp -o src/madd.o
+Analyzing source for RTL template usage
+D:/xilinx/SDSoC_IDE/SDx/2018.3/bin/rtl_template_extract  D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp  -save-query D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/src/madd.rtlx  --  -c  -I../src  -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__  
+    -target aarch64-linux-gnu -mcpu=cortex-a53 -O0 -g -w      -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include  -D HLS_NO_XIL_FPO_LIB  -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/include   -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1 -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/aarch64-linux-gnu -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/backward -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include-fixed -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/libc/usr/include  -std=c++11
+Create data motion intermediate representation
+D:/xilinx/SDSoC_IDE/SDx/2018.3/bin/clang_wrapper  -I../src  -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__  -target aarch64-linux-gnu -mcpu=cortex-a53 -O0 -g       -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include  -D HLS_NO_XIL_FPO_LIB  -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/include   -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1 -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/aarch64-linux-gnu -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/backward -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include-fixed -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/libc/usr/include  -std=c++11  -emit-llvm -S D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/src/madd.s
+
+D:\xilinx\SDSoC_IDE\workspace\muladd\Release>D:\xilinx\SDSoC_IDE\SDx\2018.3\llvm-clang\win64\llvm\bin\clang.exe -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -target aarch64-linux-gnu -mcpu=cortex-a53 -O0 -g -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include -D HLS_NO_XIL_FPO_LIB -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1 -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/aarch64-linux-gnu -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/backward -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include-fixed -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/libc/usr/include -std=c++11 -emit-llvm -S D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/src/madd.s 
+
+D:\xilinx\SDSoC_IDE\workspace\muladd\Release>exit /b 0 
+Performing accelerator source linting for madd
+D:/xilinx/SDSoC_IDE/SDx/2018.3/bin/sdslint -target cortex-a53 -func "madd" D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp -- -c -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -target aarch64-linux-gnu -mcpu=cortex-a53 -O0 -g -w      -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include  -D HLS_NO_XIL_FPO_LIB  -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/include   -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1 -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/aarch64-linux-gnu -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/backward -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include-fixed -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/libc/usr/include  -std=c++11
+aarch64-linux-gnu-g++ -c D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs/madd.cpp -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs/madd.o
+aarch64-linux-gnu-objcopy --add-section .xdinfo=D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs/madd.o.xml D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs/madd.o
+Performing pragma generation
+D:/xilinx/SDSoC_IDE/SDx/2018.3/bin/clang_wrapper -E -ID:/xilinx/SDSoC_IDE/workspace/muladd/src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -m64 -D HLS_NO_XIL_FPO_LIB -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include -ID:/xilinx/SDSoC_IDE/workspace/muladd/src -D __SDSVHLS__ -target aarch64-linux-gnu -mcpu=cortex-a53 -O0 -g -w      -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include  -D HLS_NO_XIL_FPO_LIB  -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/include   -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1 -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/aarch64-linux-gnu -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/backward -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include-fixed -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/libc/usr/include  -std=c++11 D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd_pp.cpp
+
+D:\xilinx\SDSoC_IDE\workspace\muladd\Release>D:\xilinx\SDSoC_IDE\SDx\2018.3\llvm-clang\win64\llvm\bin\clang.exe -E -ID:/xilinx/SDSoC_IDE/workspace/muladd/src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -m64 -D HLS_NO_XIL_FPO_LIB -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include -ID:/xilinx/SDSoC_IDE/workspace/muladd/src -D __SDSVHLS__ -target aarch64-linux-gnu -mcpu=cortex-a53 -O0 -g -w -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include -D HLS_NO_XIL_FPO_LIB -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1 -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/aarch64-linux-gnu -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/backward -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include-fixed -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/libc/usr/include -std=c++11 D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd_pp.cpp 
+
+D:\xilinx\SDSoC_IDE\workspace\muladd\Release>exit /b 0 
+D:/xilinx/SDSoC_IDE/SDx/2018.3/bin/pragma_gen  -func "madd"   -tcl D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd.tcl   D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd_pp.cpp -multi_aximm   --  -c  -D __SDSVHLS__ -ID:/xilinx/SDSoC_IDE/workspace/muladd/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__ -m64      -D HLS_NO_XIL_FPO_LIB  -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include -ID:/xilinx/SDSoC_IDE/workspace/muladd/src  -target aarch64-linux-gnu -mcpu=cortex-a53 -O0 -g -w      -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include  -D HLS_NO_XIL_FPO_LIB  -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/include   -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1 -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/aarch64-linux-gnu -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include/c++/7.3.1/backward -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/lib/gcc/aarch64-linux-gnu/7.3.1/include-fixed -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/include -ID:/xilinx/SDSoC_IDE/SDK/2018.3/gnu/aarch64/nt/aarch64-linux/aarch64-linux-gnu/libc/usr/include  -std=c++11
+INFO: [PragmaGen 83-3231] Successfully generated tcl script: D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd.tcl
+Moving function madd to Programmable Logic
+D:/xilinx/SDSoC_IDE/Vivado/2018.3/bin/vivado_hls D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd_run.tcl -l madd_vivado_hls.log
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source D:/xilinx/SDSoC_IDE/Vivado/2018.3/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running 'D:/xilinx/SDSoC_IDE/Vivado/2018.3/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'zhouwk' on host 'desktop-qso6j6m' (Windows NT_amd64 version 6.2) on Sat Jan 26 20:50:06 +0800 2019
+INFO: [HLS 200-10] In directory 'D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls'
+INFO: [HLS 200-10] Creating and opening project 'D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd'.
+INFO: [HLS 200-10] Adding design file 'D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp' to the project
+INFO: [HLS 200-10] Creating and opening solution 'D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to ' xczu7ev-ffvc1156-2-e '
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_sdx -optimization_level=0
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_phys_opt=none
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_bind -effort=medium
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_schedule -effort=medium
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_schedule -relax_ii_for_timing=0
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_rtl -auto_prefix=1
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty 27%
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.35ns.
+INFO: [HLS 200-10] Analyzing design file 'D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:00 ; elapsed = 00:00:18 . Memory (MB): peak = 104.969 ; gain = 40.508
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:00 ; elapsed = 00:00:18 . Memory (MB): peak = 104.969 ; gain = 40.508
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:00 ; elapsed = 00:00:18 . Memory (MB): peak = 105.852 ; gain = 41.391
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:00 ; elapsed = 00:00:18 . Memory (MB): peak = 106.105 ; gain = 41.645
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:18 . Memory (MB): peak = 127.090 ; gain = 62.629
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp:47:8) in function 'madd'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:19 . Memory (MB): peak = 127.090 ; gain = 62.629
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'madd' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'madd' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 11.
+WARNING: [SCHED 204-71] Latency directive discarded for region madd since it contains subloops.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 18.792 seconds; current allocated memory: 77.245 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.111 seconds; current allocated memory: 77.397 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'madd' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'madd/A' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'madd/B' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'madd/C' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'madd' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'madd_fadd_32ns_32ns_32_8_full_dsp_1' to 'madd_fadd_32ns_32bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'madd_fadd_32ns_32bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'madd'.
+INFO: [HLS 200-111]  Elapsed time: 0.161 seconds; current allocated memory: 77.753 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:21 . Memory (MB): peak = 127.090 ; gain = 62.629
+INFO: [SYSC 207-301] Generating SystemC RTL for madd with prefix a0_.
+INFO: [VHDL 208-304] Generating VHDL RTL for madd with prefix a0_.
+INFO: [VLOG 209-307] Generating Verilog RTL for madd with prefix a0_.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/xilinx/SDSoC_IDE/Vivado/2018.3/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'a0_madd_ap_fadd_6_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+create_ip: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 338.227 ; gain = 42.004
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'a0_madd_ap_fadd_6_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'a0_madd_ap_fadd_6_full_dsp_32'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/xilinx/SDSoC_IDE/Vivado/2018.3/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Sat Jan 26 20:50:54 2019...
+INFO: [HLS 200-112] Total elapsed time: 49.454 seconds; peak allocated memory: 77.753 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Sat Jan 26 20:50:54 2019...
+D:/xilinx/SDSoC_IDE/SDK/2018.3/gnuwin/bin/sed.exe -i -e {s/xilinx\.com\/xidane/xilinx\.com\/xd/g} D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/impl/ip/auxiliary.xml
+D:/xilinx/SDSoC_IDE/SDx/2018.3/bin/xsltproc  --output D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/madd.hlsmap1.xml  --stringparam P_CLKID 3  --stringparam P_HLS_TYPE hls   D:/xilinx/SDSoC_IDE/SDx/2018.3/scripts/xsd/xdHlsmapRenameAttr.xsl  D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/madd_auxiliary.xml
+D:/xilinx/SDSoC_IDE/SDx/2018.3/bin/xsltproc  --output D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/madd.hlsmap.xml  D:/xilinx/SDSoC_IDE/SDx/2018.3/scripts/xsd/xdHlsmapAdapter.xsl  D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/madd.hlsmap1.xml
+D:/xilinx/SDSoC_IDE/SDx/2018.3/bin/xsltproc    --output D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/madd.fcnmap.xml  D:/xilinx/SDSoC_IDE/SDx/2018.3/scripts/xsd/xdHlsmapAxi4.xsl  D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/madd.hlsmap.xml
+D:/xilinx/SDSoC_IDE/SDx/2018.3/bin/xsltproc  --output D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/madd_if.xml  --stringparam P_ADAPTER_COMPREF adapter_v3_0  D:/xilinx/SDSoC_IDE/SDx/2018.3/scripts/xsd/xdHlsAdapterComp.xsl  D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/madd.fcnmap.xml
+aarch64-linux-gnu-objcopy --add-section .xddata=D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs/madd.xml D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs/madd.o
+aarch64-linux-gnu-objcopy --add-section .xdasm=D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/src/madd.s D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs/madd.o
+aarch64-linux-gnu-g++ -E -I../src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__ -MTD:/xilinx/SDSoC_IDE/workspace/muladd/Release/src/madd.o -MFD:/xilinx/SDSoC_IDE/workspace/muladd/Release/src/madd.d -MTD:/xilinx/SDSoC_IDE/workspace/muladd/Release/src/madd.o       -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include  -D HLS_NO_XIL_FPO_LIB  -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/include D:/xilinx/SDSoC_IDE/workspace/muladd/src/madd.cpp -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.pp/madd.iix
+aarch64-linux-gnu-objcopy --add-section .xdpp=D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.pp/madd.ii D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs/madd.o
+aarch64-linux-gnu-objcopy --add-section .xdfcnmap=D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/madd.fcnmap.xml D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs/madd.o
+aarch64-linux-gnu-objcopy --add-section .xdhlscore=D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/vhls/madd/solution/impl/ip/xilinx_com_hls_madd_1_0.zip D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs/madd.o
+aarch64-linux-gnu-objcopy --add-section .xdif=D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/madd_if.xml D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs/madd.o
+sds++ log file saved as D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/reports/sds_madd.log
+sds++ completed at Sat Jan 26 20:50:56 +0800 2019

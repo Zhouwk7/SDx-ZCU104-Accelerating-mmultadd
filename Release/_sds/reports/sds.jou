@@ -1,0 +1,93 @@
+(c) Copyright 2012-2018 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2018.3 SW Build 2405991 on Thu Dec  6 23:39:10 MST 2018
+# Start time    : Sat Jan 26 20:52:26 +0800 2019
+# Command line  : sds++ --remote_ip_cache D:/xilinx/SDSoC_IDE/workspace/ip_cache -o muladd.elf ./src/madd.o ./src/main.o ./src/mmult.o -dmclkid 3 -mno-boot-files -perf-root main -perf-est swdata.xml -perf-funcs mmult,madd -sds-sys-config a53_linux -sds-proc a53_linux -sds-pf zcu104
+# Log file      : D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/reports/sds.log
+# Journal file  : D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/reports/sds.jou
+# Report file   : D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/reports/sds.rpt
+#-----------------------------------------------------------
+
+#-----------------------------------------------------------
+# This file contains undocumented internal commands and is
+# provided for diagnostic purposes. To reproduce the results
+# of this run, please run the sds++ command line above again.
+#-----------------------------------------------------------
+
+# Analyzing object files
+aarch64-linux-gnu-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/madd.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.data/xdinfo.xml
+aarch64-linux-gnu-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/madd.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.data/xddata.xml
+aarch64-linux-gnu-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/madd.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.data/madd.o.xml
+aarch64-linux-gnu-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/main.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.data/xdinfo.xml
+aarch64-linux-gnu-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/main.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.data/xddata.xml
+aarch64-linux-gnu-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/main.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.data/main.o.xml
+aarch64-linux-gnu-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/mmult.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.data/xdinfo.xml
+aarch64-linux-gnu-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/mmult.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.data/xddata.xml
+aarch64-linux-gnu-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/mmult.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.data/mmult.o.xml
+D:/xilinx/SDSoC_IDE/SDx/2018.3/bin/build_xd_ip_db -ip_search 0  -sds-pf D:/xilinx/SDSoC_IDE/workspace/muladd/Release/.Xil/zcu104.hpfm    -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.cdb/xd_ip_db.xml  
+# Using prebuilt hardware
+cd D:/xilinx/SDSoC_IDE/workspace/muladd/Release
+# Skipping block diagram (BD), address map, port information and device registration for partition 0
+cd D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs
+cd D:/xilinx/SDSoC_IDE/workspace/muladd/Release
+# Prepare hardware access API functions
+cd D:/xilinx/SDSoC_IDE/workspace/muladd/Release
+# Create accelerator stub functions
+cd D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs
+cd D:/xilinx/SDSoC_IDE/workspace/muladd/Release
+cd D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs
+# Compile hardware access API functions
+aarch64-linux-gnu-gcc  -DPERF_EST       -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include  -D HLS_NO_XIL_FPO_LIB  -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/include -c  D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs/portinfo.c
+aarch64-linux-gnu-g++        -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include  -D HLS_NO_XIL_FPO_LIB  -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/include -c  D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs/cf_stub.c
+aarch64-linux-gnu-gcc       -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include  -D HLS_NO_XIL_FPO_LIB  -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/include -c  D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/sw_perf_est.c -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/sw_perf_est.o
+aarch64-linux-gnu-ar crs D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs/libxlnk_stub.a D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs/portinfo.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs/cf_stub.o
+cd D:/xilinx/SDSoC_IDE/workspace/muladd/Release
+cd D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs
+# Compile accelerator stub functions
+cd D:/xilinx/SDSoC_IDE/workspace/muladd/Release
+cd D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs
+aarch64-linux-gnu-ar crs D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs/libmuladd.a D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs/portinfo.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs/cf_stub.o 
+cd D:/xilinx/SDSoC_IDE/workspace/muladd/Release
+cd D:/xilinx/SDSoC_IDE/workspace/muladd/Release
+cd D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs
+# Compile hardware access API functions
+aarch64-linux-gnu-gcc  -DPERF_EST       -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include  -D HLS_NO_XIL_FPO_LIB  -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/include -c  D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs/portinfo.c
+aarch64-linux-gnu-g++        -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include  -D HLS_NO_XIL_FPO_LIB  -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/include -c  D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs/cf_stub.c
+aarch64-linux-gnu-gcc       -I D:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/include  -D HLS_NO_XIL_FPO_LIB  -I D:/xilinx/SDSoC_IDE/Vivado/2018.3/include -c  D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/sw_perf_est.c -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/sw_perf_est.o
+aarch64-linux-gnu-ar crs D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs/libxlnk_stub.a D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs/portinfo.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs/cf_stub.o
+cd D:/xilinx/SDSoC_IDE/workspace/muladd/Release
+cd D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs
+aarch64-linux-gnu-ar crs D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs/libmuladd.a D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs/portinfo.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs/cf_stub.o 
+cd D:/xilinx/SDSoC_IDE/workspace/muladd/Release
+# Link application ELF file
+aarch64-linux-gnu-g++   D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/sw_perf_est.o  D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/madd.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/main.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/mmult.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs/portinfo.o     -LD:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs -Wl,--start-group  -Wl,--end-group -Wl,--start-group    -lpthread -LD:/xilinx/SDSoC_IDE/SDx/2018.3/target/aarch64-linux/lib -lsds_lib -lxlnk_stub  -Wl,--end-group -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs/muladd.elf 
+aarch64-linux-gnu-objcopy -R .xdinfo -R .xddata -R .xdasm -R .xdfcnmap -R .xdhlscore -R .xdif -R .xdparams -R .xdcore -R .xdrepo -R .xdsdata -R .xdpp -R .xdrtlx D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/swstubs/muladd.elf
+# Analyzing object files
+aarch64-linux-gnu-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/.accdata/madd.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.data/xdinfo.xml
+aarch64-linux-gnu-objcopy -O binary --set-section-flags .xdrtlx=alloc --only-section=.xdrtlx D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/.accdata/madd.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.rtlx/madd.rtlx
+aarch64-linux-gnu-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/.accdata/madd.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.data/madd.xml
+aarch64-linux-gnu-objcopy -O binary --set-section-flags .xdpp=alloc --only-section=.xdpp D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/.accdata/madd.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.pp/madd.ii
+aarch64-linux-gnu-objcopy -O binary --set-section-flags .xdfcnmap=alloc --only-section=.xdfcnmap D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/.accdata/madd.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.cdb/madd.madd.fcnmap.xml
+aarch64-linux-gnu-objcopy -O binary --set-section-flags .xdhlscore=alloc --only-section=.xdhlscore D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/.accdata/madd.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/xilinx_com_hls_madd_1_0.zip
+D:/xilinx/SDSoC_IDE/SDx/2018.3/bin/unzip.bat -u -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/xilinx_com_hls_madd_1_0.zip -d D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0
+aarch64-linux-gnu-objcopy -O binary --set-section-flags .xdif=alloc --only-section=.xdif D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/.accdata/madd.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.cdb/madd_if.xml
+aarch64-linux-gnu-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/main.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.data/xdinfo.xml
+aarch64-linux-gnu-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/main.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.data/xddata.xml
+aarch64-linux-gnu-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/main.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.data/main.o.xml
+aarch64-linux-gnu-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/.accdata/mmult.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.data/xdinfo.xml
+aarch64-linux-gnu-objcopy -O binary --set-section-flags .xdrtlx=alloc --only-section=.xdrtlx D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/.accdata/mmult.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.rtlx/mmult.rtlx
+aarch64-linux-gnu-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/.accdata/mmult.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.data/mmult.xml
+aarch64-linux-gnu-objcopy -O binary --set-section-flags .xdpp=alloc --only-section=.xdpp D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/.accdata/mmult.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.pp/mmult.ii
+aarch64-linux-gnu-objcopy -O binary --set-section-flags .xdfcnmap=alloc --only-section=.xdfcnmap D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/.accdata/mmult.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.cdb/mmult.mmult.fcnmap.xml
+aarch64-linux-gnu-objcopy -O binary --set-section-flags .xdhlscore=alloc --only-section=.xdhlscore D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/.accdata/mmult.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/xilinx_com_hls_mmult_1_0.zip
+D:/xilinx/SDSoC_IDE/SDx/2018.3/bin/unzip.bat -u -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/xilinx_com_hls_mmult_1_0.zip -d D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0
+aarch64-linux-gnu-objcopy -O binary --set-section-flags .xdif=alloc --only-section=.xdif D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est/.accdata/mmult.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.cdb/mmult_if.xml
+D:/xilinx/SDSoC_IDE/SDx/2018.3/bin/build_xd_ip_db -ip_search 0  -sds-pf D:/xilinx/SDSoC_IDE/workspace/muladd/Release/.Xil/zcu104.hpfm  -ip D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0 -ip D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0  -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.cdb/xd_ip_db.xml  
+# Generating data motion network
+D:/xilinx/SDSoC_IDE/SDx/2018.3/bin/llvm-link -o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/sds_all.o D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/./src/madd.s D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/./src/main.s D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/./src/mmult.s
+cd D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm
+cd D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm
+D:/xilinx/SDSoC_IDE/SDx/2018.3/bin/XidanePass  --dmclkid 3  --repo D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.cdb/xd_ip_db.xml  --dmdb D:/xilinx/SDSoC_IDE/SDx/2018.3/data/DM.db   -os linux -processor cortex-a53 -partition 0   -perfest
+cd D:/xilinx/SDSoC_IDE/workspace/muladd/Release
+D:/xilinx/SDSoC_IDE/SDx/2018.3/bin/perf_est  -s swdata.xml  -hw D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/hw_perf_est.xml  -r D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.cdb/xd_ip_db.xml  -est_ws D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/est  -apsys D:/xilinx/SDSoC_IDE/workspace/muladd/Release/_sds/.llvm/apsys_0.xml
+# sds++ completed at Sat Jan 26 20:53:18 +0800 2019

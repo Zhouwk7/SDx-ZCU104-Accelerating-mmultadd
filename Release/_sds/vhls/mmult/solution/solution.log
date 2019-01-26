@@ -1,0 +1,73 @@
+==============================================================
+File generated on Sat Jan 26 20:51:43 +0800 2019
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-10] Setting target device to ' xczu7ev-ffvc1156-2-e '
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_sdx -optimization_level=0
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_phys_opt=none
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_bind -effort=medium
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_schedule -effort=medium
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_schedule -relax_ii_for_timing=0
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_rtl -auto_prefix=1
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty 27%
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.35ns.
+INFO: [HLS 200-10] Analyzing design file 'D:/xilinx/SDSoC_IDE/workspace/muladd/src/mmult.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 104.875 ; gain = 18.676
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 104.875 ; gain = 18.676
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 106.098 ; gain = 19.898
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 106.098 ; gain = 19.898
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-2.1' (D:/xilinx/SDSoC_IDE/workspace/muladd/src/mmult.cpp:68) in function 'mmult' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (D:/xilinx/SDSoC_IDE/workspace/muladd/src/mmult.cpp:71) in function 'mmult' completely with a factor of 32.
+INFO: [XFORM 203-101] Partitioning array 'Abuf' (D:/xilinx/SDSoC_IDE/workspace/muladd/src/mmult.cpp:55) in dimension 2 with a block factor 16.
+INFO: [XFORM 203-101] Partitioning array 'Bbuf' (D:/xilinx/SDSoC_IDE/workspace/muladd/src/mmult.cpp:55) in dimension 1 with a block factor 16.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 128.066 ; gain = 41.867
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (D:/xilinx/SDSoC_IDE/workspace/muladd/src/mmult.cpp:59:13) in function 'mmult'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (D:/xilinx/SDSoC_IDE/workspace/muladd/src/mmult.cpp:67:20) in function 'mmult'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 128.066 ; gain = 41.867
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'mmult' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 264.
+WARNING: [SCHED 204-71] Latency directive discarded for region mmult since it contains subloops.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 9.555 seconds; current allocated memory: 82.543 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.606 seconds; current allocated memory: 86.138 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mmult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'mmult/A' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mmult/B' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mmult/C' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'mmult' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'mmult_fadd_32ns_32ns_32_8_full_dsp_1' to 'mmult_fadd_32ns_3bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'mmult_fmul_32ns_32ns_32_5_max_dsp_1' to 'mmult_fmul_32ns_3cud' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'mmult' is 61801 from HDL expression: (1'b0 == ap_block_pp1_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'mmult_fadd_32ns_3bkb': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mmult_fmul_32ns_3cud': 32 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mmult'.
+INFO: [HLS 200-111]  Elapsed time: 1.984 seconds; current allocated memory: 95.612 MB.
+INFO: [RTMG 210-278] Implementing memory 'a1_mmult_Abuf_0_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:08 ; elapsed = 00:00:19 . Memory (MB): peak = 158.844 ; gain = 72.645
+INFO: [SYSC 207-301] Generating SystemC RTL for mmult with prefix a1_.
+INFO: [VHDL 208-304] Generating VHDL RTL for mmult with prefix a1_.
+INFO: [VLOG 209-307] Generating Verilog RTL for mmult with prefix a1_.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-112] Total elapsed time: 40.527 seconds; peak allocated memory: 95.612 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Sat Jan 26 20:52:23 2019...

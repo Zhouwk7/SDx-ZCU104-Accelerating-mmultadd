@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"a1_mmult": {
+			"proto_instances": {
+			}
+		}
+	}
+}
